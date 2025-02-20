@@ -1,16 +1,209 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body{
-
-    background-color: black;
+    /* Multiple color background - https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient */
+   
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    min-height: 100vh;
+    font-family: atma;
+    margin: 0;
     
+    padding: 0;
+   
 }
 
-h1{
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: xx-large;
+    position: fixed;   /* Fix the nav bar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;     /* Ensures it stays above other content */
+  }
+  
+  li {
+    float: left;
 
+   
+  }
+  
+  li a {
+    display: block;
     color: white;
-    margin-top: 20%;
-    text-align: center;
-    
-    border-right: 0%;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  li img {
+    width: 80px;       
+    height: auto;
+    border-radius: 8px;
+    vertical-align: middle;
+  }
 
+.Main{
+    border-radius: 8px;;
+    width: 15%;
+    height: auto;
+  }
+
+div{
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
+
+div p{
+
+    font-size: x-large;
+}
+
+
+
+/* Container to arrange the columns side by side */
+.row {
+    display: flex;              /* Use flexbox to lay out columns */
+    flex-wrap: wrap;            /* Allow wrapping for smaller screens */
+    justify-content: center;    /* Center the columns horizontally */
+    gap: 20px;                  /* Space between columns */
+    padding: 40px;              /* Optional padding around the container */
+  }
+  
+  /* Each column will hold one card */
+  .column {
+    flex: 0 0 45%;              /* Approximately 2 columns per row (adjust as needed) */
+    box-sizing: border-box;
+  }
+  
+  /* Modified card styling */
+  .card {
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=459fcc&c2=ffffff&gt=l&gd=dtl
+*/
+background: #459FCC;
+background: linear-gradient(135deg, #459FCC, #FFFFFF);
+    border-radius: 10px;          /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;                 /* Center the card within its column */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .card img {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0 auto 15px;
+  }
+  
+  .card .heading {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0 0 20px;
+    color: #444;
+  }
+  
+  .card ol {
+    padding-left: 20px;
+    color: #555;
+  }
+  
+  .card li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 650px) {
+    .column {
+      flex: 0 0 100%;
+    }
+  }
+
+
+
+
+ form {
+   /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=a5a657&gt=l&gd=dbl
+*/
+
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=d32020&gt=r&gd=dbl
+*/
+background: #6045CC;
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=d32020&gt=r&gd=dcc
+*/
+background: #6045CC;
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=763849&c2=3155a4&gt=r&gd=dcc
+*/
+background: #763849;
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=efefef&c2=3155a4&gt=r&gd=dcc
+*/
+background: #EFEFEF;
+background: radial-gradient(at center, #EFEFEF, #3155A4);
+    padding: 1%;
+    margin: auto;
+    border: groove;
+    border-radius: 20px;
+    font-size: 17px;
+    width: 500px;
+    
+}
+
+
+footer {
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=ffffff&gt=l&gd=dtl
+*/
+
+background: linear-gradient(135deg, #6045CC, #FFFFFF);
+    padding-top: 0.1%;
+    padding-bottom: 0.5%; border-radius: 10px;
+ }
+    
+    
+ #imgFooter {
+    border-radius: 7.5px; margin: 0.5px;
+    }
+    
+  
+  

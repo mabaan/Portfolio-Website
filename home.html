@@ -2,12 +2,174 @@
 <html>
 <head>
 <title>Mohammed Imtiaz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
 <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
 
-<h1><b>Hello! My Name is Mohammed Abaan.</b></h1>
+  <ul>
+  <li><img src="download.png" alt="Logo"></li>
+  <li><a href="#" data-target="home">Home</a></li>
+  <li><a href="#" data-target="about">About</a></li>
+  <li><a href="#" data-target="portfolio">Portfolio</a></li>
+  <li><a href="#" data-target="contact">Contact</a></li>
 
+  </ul>
+ <!---->
+
+  <br><br><br><br><br>
+
+  <section id="home">
+    <center><h1>Welcome to my Page!</h1></center>
+
+
+  </section>
+
+  <section id="about">
+    <div>
+    <center><h1>About</h1></center>
+    <center><img class="Main"src=1.png></center>
+    <center><p>My name is Mohammed Abaan Imtiaz, and I am a Third-Year Computer Science Student at the American University of Sharjah. I am a highly motivated Computer Science student with a passion for programming and problem-solving. I take initiative and consistently complete projects ahead of deadlines. I am a dependable team player, recognized for effectively communicating ideas and collaborating to find innovative solutions. I am passionate about learning and stay up to date with the latest technologies, programming languages, and tools. I am interested in creating and building software applications, websites, or games.
+        I currently hold a Grade Point Average of 3.72 on a 4.00 scale and have been recognized for outstanding academic performance through multiple Academic Excellence Awards, including the Chancellor's List Award and Dean's List Awards. I am also certified in Cybersecurity through IBM, with a strong foundation in risk assessment, network security, and threat mitigation strategies. I enjoy playing football and my favourite team is FC Barcelona. </p></center>
+    <br>
+    <br>
+</div>
+</section>
+
+    <section id="portfolio">
+    <center><h1>Portfolio</h1></center>
+
+  
+
+    
+   
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Teaching Assistant</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/American_University_of_Sharjah_%28emblem%29.png" alt="The American University of Sharjah">
+            <p class="heading"><strong>American University of Sharjah</strong></p>
+            <ol>
+              <li>Conducted lab sessions and tutorials to reinforce lecture material.</li>
+              <li>Provided one-on-one and group support to students through office hours.</li>
+              <li>Graded assignments, quizzes, and projects, providing constructive feedback.</li>
+              <li>Facilitated discussions and encouraged student engagement during classes.</li>
+              <li>Assisted in preparing and organizing course materials and resources, including course projects and assignments.</li>
+            </ol>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <h3>Data Science Intern</h3>
+            <img src="https://aurainsure.tech/assets/images/Aura-logo.png" alt="Aura Technologies">
+            <p class="heading"><strong>Aura Technologies | Dubai, UAE</strong></p>
+            <ol>
+              <li>Analyzed and processed extensive customer datasets, ensuring data accuracy and integrity for business insights.</li>
+              <li>Utilized Python and Excel for data cleaning, visualization, and trend analysis.</li>
+              <li>Participated in QA testing for web applications, identifying and documenting software bugs and usability issues.</li>
+              <li>Assisted in developing and executing test cases for software functionalities to maintain high quality and performance standards.</li>
+              
+            </ol>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <section id="contact">
+      <center><h1>Contact</h1></center>
+
+      <form action = "home.html" method ="post">
+            <label for = "eventName"><b>Enter Your Name</b></label>
+            <br>
+            <input type = "text" placeholder = "Enter..." name = "eventName" id = "eventName" required>
+            <br><br>
+            <label for = "emailid"><b>Enter your Email ID</b></label>
+            <br>
+            <input type = "email" placeholder="abc@gmail.com" name = "emailid" id = "emailid" required>
+            <br><br>
+        
+            <label for = "description"><b>Brief Description</b></label>
+            <br>
+            <textarea cols = 50 rows = 3 placeholder="Please enter here..." name = "description" id = "description"></textarea>
+        
+            <h2>Additional Info</h2>
+            <label for="q01"><b>Are you looking to hire me?</b></label>
+            <br>
+            <input type ="radio" name ="q0" id="q01"> Yes
+            <br>
+            <input type ="radio" name ="q0" id="q02"> No
+            <br>
+            
+            <br><label for = "Q1"><b>Are you looking to get in contact?</b></label>
+            <br>
+            <input type = "radio" name = "question1" id = "question1">Yes
+            <br>
+            <input type = "radio" name = "question1" id = "question1">No
+            <br>
+            <input type = "radio" name = "question1" id = "question1">Maybe
+            <br><br>
+            <section>
+                <label for = "q2Answer1"><b>What type of company are you?</b></label>
+                <br>
+                <input type = "checkbox" name = "q2Answer1" id = "q2Answer1">Consulting
+                <br>
+                <input type = "checkbox" name = "q2Answer2" id = "q2Answer2">Software Development
+                <br>
+                <input type = "checkbox" name = "q2Answer3" id = "q2Answer3">Software as a Service
+                <br>
+                <input type = "checkbox" name = "q2Answer4" id = "q2Answer4">Cybersecurity
+                <br>
+                <input type = "checkbox" name = "q2Answer5" id = "q2Answer5">Other
+                <br><br>
+            </section>
+            <label for="dropdown"><b>Select the city you are located in: </b></label>
+            <br>
+            <select name = "dropdown" id = "dropdown">
+                <option value = "CEN">Dubai</option>
+                <option value = "SBA">Abu Dhabi</option>
+                <option value = "CAS">Sharjah</option>
+                <option value = "CAAD">Ajman</option>
+                <option value = "OSA">Fujairah</option>
+                <option value = "Other">Other</option>
+            </select>
+            <br><br>
+            <center><button type = "submit" class = "subButton">Submit</button></center>
+            <br>
+            <center><button type = "reset" class = "resButton">Reset</button></center>
+        </form>
+
+
+    </section>
+
+    <!--Footer-->
+
+    <br>
+        
+    <footer>
+        <center>
+        <p>© Mohammed Abaan. All rights reserved.</p>
+        <a href = "https://github.com/68freeworld"><img src =
+        "githicon.webp" alt =
+        "Github Icon" width="30" id = "imgFooter"></a>
+        <a href = "https://www.twitter.com/abaangaming"><img src = "xicon.png" alt = "X Icon" width="32" id = "imgFooter"></a>
+       
+        <a href = "https://www.linkedin.com/in/mohammed-abaan-0245ba289"><img src = "linkicon.png" alt = "LinkedIn Icon" width = 33 id = "imgFooter"></a>
+        <a href = "https://www.instagram.com/68freeworld/"><img src = "igicon.jfif" alt = "Instagram Icon" width = 33 id = "imgFooter"></a>
+        </center>
+    </footer>
+       
+        
+
+
+      
+    <script src="event.js"></script>
 </body>
 </html> 
