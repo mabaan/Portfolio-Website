@@ -1,7 +1,7 @@
 // Select all nav links
 const navLinks = document.querySelectorAll('ul li a');
 
-// Attach a click listener to each link
+// Navigate to each section
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();  // Prevent the default jump-to-anchor behavior
@@ -17,3 +17,8 @@ navLinks.forEach(link => {
     }
   });
 });
+
+// Form Submission
+document.getElementById("subButton").addEventListener("click",function() {
+  const displayDate = new Date().toLocaleString(); 
+  alert("Submitted on " + displayDate);});
