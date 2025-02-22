@@ -22,3 +22,11 @@ navLinks.forEach(link => {
 document.getElementById("subButton").addEventListener("click",function() {
   const displayDate = new Date().toLocaleString(); 
   alert("Submitted on " + displayDate);});
+
+  // Dark Mode
+  const themeButton = document.getElementById('themeButton');
+        themeButton.addEventListener("click", changeTheme);
+
+        function changeTheme() {
+            document.body.classList.toggle('darkmode');
+        }
