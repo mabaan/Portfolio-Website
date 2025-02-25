@@ -19,9 +19,14 @@ navLinks.forEach(link => {
 });
 
 // Form Submission
-document.getElementById("subButton").addEventListener("click",function() {
+const form = document.getElementById("form");
+
+function listening() {
   const displayDate = new Date().toLocaleString(); 
-  alert("Submitted on " + displayDate);});
+  alert("Submitted on " + displayDate);
+};
+
+form.addEventListener('submit', listening);
 
   // Dark Mode
   const themeButton = document.getElementById('themeButton');
