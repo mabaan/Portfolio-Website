@@ -35,3 +35,29 @@ form.addEventListener('submit', listening);
         function changeTheme() {
             document.body.classList.toggle('darkmode');
         }
+
+
+
+        const text = 'Welcome to my Page!';
+        const speed = 100; // Speed in milliseconds
+        const elem = document.getElementById('welcome');
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                elem.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // Wait a bit before resetting to start the effect again
+                setTimeout(() => {
+                    elem.innerHTML = ''; // Clear the text
+                    i = 0; // Reset the counter
+                    typeWriter(); // Start typing again
+                }, 2000); // Adjust the delay as needed
+            }
+        }
+        
+        // Start typing effect when the document is loaded
+        document.addEventListener('DOMContentLoaded', typeWriter);
+        

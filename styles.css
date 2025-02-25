@@ -5,7 +5,7 @@ html {
 
   body {
     /* Using background instead of background-color for gradients */
-    background-image: radial-gradient(circle, #6190d6, #7398da, #83a1df, #92a9e3, #a0b2e7);
+    background-image: radial-gradient(circle, #ccd6e0, #d7dde6, #e1e5ec, #ebecf1, #f4f4f7, #f1f1fa, #edeefc, #eaebff, #d5ddff, #bcd1ff, #9dc5ff, #74bbff);
     min-height: 100vh;
     font-family: atma;
     margin: 0;
@@ -38,7 +38,7 @@ ul {
     text-align: right;
     padding: 14px 16px;
     text-decoration: none;
-    margin: 0;
+    margin-left: 30px;
   }
   
   li a:hover {
@@ -92,8 +92,8 @@ div p{
 * Created with https://www.css-gradient.com
 * Gradient link: https://www.css-gradient.com/?c1=459fcc&c2=ffffff&gt=l&gd=dtl
 */
-background: #459FCC;
-background: linear-gradient(135deg, #459FCC, #FFFFFF);
+
+background-image: linear-gradient(to bottom, #ced6da, #c4d7e0, #b8d8e6, #acd8ec, #9fd9f2);
     border-radius: 10px;          /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     overflow: hidden;
@@ -151,32 +151,9 @@ background: linear-gradient(135deg, #459FCC, #FFFFFF);
 
 
  form {
-   /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=a5a657&gt=l&gd=dbl
-*/
 
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=d32020&gt=r&gd=dbl
-*/
-background: #6045CC;
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=d32020&gt=r&gd=dcc
-*/
-background: #6045CC;
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=763849&c2=3155a4&gt=r&gd=dcc
-*/
-background: #763849;
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=efefef&c2=3155a4&gt=r&gd=dcc
-*/
-background: #EFEFEF;
-background: radial-gradient(at center, #EFEFEF, #3155A4);
+
+  background-image: radial-gradient(circle, #9cd4f0, #b0d6fc, #c8d6ff, #e2d7ff, #fad7ff);
     padding: 1%;
     margin: auto;
     border: groove;
@@ -193,7 +170,7 @@ footer {
 * Gradient link: https://www.css-gradient.com/?c1=6045cc&c2=ffffff&gt=l&gd=dtl
 */
 
-background: linear-gradient(135deg, #6045CC, #FFFFFF);
+background-image: linear-gradient(to top, #00f4ff, #25f1da, #5cebaf, #89e284, #b1d65c);
     padding-top: 0.1%;
     padding-bottom: 0.5%; border-radius: 10px;
  }
@@ -217,6 +194,7 @@ background: linear-gradient(135deg, #6045CC, #FFFFFF);
       font-weight: 600;
       line-height: normal;
       margin: 0;
+      margin-top: 10px;
       min-height: 60px;
       min-width: 0;
       outline: none;
@@ -227,7 +205,7 @@ background: linear-gradient(135deg, #6045CC, #FFFFFF);
       -webkit-user-select: none;
       touch-action: manipulation;
       text-align: center;
-      width: 25%;
+      width: 14%;
       will-change: transform;
     }
     
@@ -250,10 +228,44 @@ background: linear-gradient(135deg, #6045CC, #FFFFFF);
       background: linear-gradient(90deg, #333333 0%, #555555 100%);
       color: #fff; /* Ensuring text color is also set for dark mode */
   }
-  
 
-  #home h1{
 
+/* Dark Mode for Cards */
+.darkmode .card {
+  background: #424242; /* Darker background for cards */
+  color: #ddd; /* Lighter text for readability */
+  border-color: #616161; /* Adjust border colors if necessary */
+}
+
+/* Dark Mode for Form */
+.darkmode form {
+  background: #424242; /* Dark background for forms */
+  color: #ddd; /* Light text for forms */
+}
+
+/* Dark Mode for Footer */
+.darkmode footer {
+  background: #525252; /* Dark background for footer */
+  color: #ccc; /* Light text color for footer */
+}
+
+/* Additional adjustments for links or specific text within the dark mode */
+.darkmode a, .darkmode .heading, .darkmode ol {
+  color: #ccd; /* Adjust link colors in dark mode if necessary */
+}
+
+
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#welcome {
     font-size: xx-large;
+    border-right: 2px solid black; /* This creates the cursor effect */
+    padding: 0 10px;
+    white-space: nowrap; /* Keeps the container on one line */
+    overflow: hidden; /* Keeps everything neat */
+    animation: blink 0.75s step-end infinite;
+}
 
-  }
