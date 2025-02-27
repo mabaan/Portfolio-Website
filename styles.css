@@ -1,268 +1,256 @@
+/* GLOBAL STYLES */
 html {
-    scroll-behavior: smooth;
-  }
-  
-
-  body {
-    /* Using background instead of background-color for gradients */
-    background-image: radial-gradient(circle, #ccd6e0, #d7dde6, #e1e5ec, #ebecf1, #f4f4f7, #f1f1fa, #edeefc, #eaebff, #d5ddff, #bcd1ff, #9dc5ff, #74bbff);
-    min-height: 100vh;
-    font-family: atma;
-    margin: 0;
-    padding: 0;
+  scroll-behavior: smooth;
 }
 
+body {
+  background-image: radial-gradient(circle, #ccd6e0, #d7dde6, #e1e5ec, #ebecf1, #f4f4f7, #f1f1fa, #edeefc, #eaebff, #d5ddff, #bcd1ff, #9dc5ff, #74bbff);
+  min-height: 100vh;
+  font-family: atma;
+  margin: 0;
+  padding: 0;
+}
 
+/* NAV BAR */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 5%;
-    overflow: hidden;
-    background-color: #333;
-    font-size: xx-large;
-    position: fixed;   /* Fix the nav bar at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000;     /* Ensures it stays above other content */
-  }
-  
-  li {
-    float: left;
-    position: relative;
-   
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin-left: 30px;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  
-  li img {
-    width: 80px;       
-    height: auto;
-    border-radius: 8px;
-    vertical-align: middle;
-  }
-
-  
-
-.Main{
-    border-radius: 8px;;
-    width: 25%;
-    height: auto;
-  }
-
-div{
-    margin-left: 10px;
-    margin-right: 10px;
-
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5%;
+  overflow: hidden;
+  background-color: #333;
+  font-size: xx-large;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-div p{
-
-    font-size: x-large;
+li {
+  float: left;
+  position: relative;
 }
 
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-left: 30px;
+}
 
+li a:hover {
+  background-color: #111;
+}
 
-/* Container to arrange the columns side by side */
+li img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+/* MAIN IMAGE */
+.Main {
+  border-radius: 8px;
+  width: 25%;
+  height: auto;
+}
+
+/* GLOBAL DIV MARGINS */
+div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div p {
+  font-size: x-large;
+}
+
+/* CARDS CONTAINER */
 .row {
-    display: flex;              /* Use flexbox to lay out columns */
-    flex-wrap: wrap;            /* Allow wrapping for smaller screens */
-    justify-content: center;    /* Center the columns horizontally */
-    gap: 20px;                  /* Space between columns */
-    padding: 40px;              /* Optional padding around the container */
-  }
-  
-  /* Each column will hold one card */
-  .column {
-    flex: 0 0 45%;              /* Approximately 2 columns per row (adjust as needed) */
-    box-sizing: border-box;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
 
-  .card {
+/* CARD COLUMNS */
+.column {
+  flex: 0 0 45%;
+  box-sizing: border-box;
+}
 
-background-image: linear-gradient(to bottom, #ced6da, #c4d7e0, #b8d8e6, #acd8ec, #9fd9f2);
-    border-radius: 10px;          /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden;
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;                 /* Center the card within its column */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card h3 {
-    text-align: center;
-    color: #333;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .card img {
-    display: block;
-    width: 25%;
-    height: auto;
-    margin: 0 auto 15px;
-  }
-  
-  .card .heading {
-    text-align: center;
-    font-size: 1.1em;
-    margin: 0 0 20px;
-    color: #444;
-  }
-  
-  .card ol {
-    padding-left: 20px;
-    color: #555;
-  }
-  
-  .card li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
-  
- 
+/* CARD STYLES */
+.card {
+  background-image: linear-gradient(to bottom, #ced6da, #c4d7e0, #b8d8e6, #acd8ec, #9fd9f2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
- form {
+.card h3 {
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
+.card img {
+  display: block;
+  width: 25%;
+  height: auto;
+  margin: 0 auto 15px;
+}
 
+.card .heading {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 0 0 20px;
+  color: #444;
+}
+
+.card ol {
+  padding-left: 20px;
+  color: #555;
+}
+
+.card li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* FORM STYLES */
+form {
   background-image: radial-gradient(circle, #9cd4f0, #b0d6fc, #c8d6ff, #e2d7ff, #fad7ff);
-    padding: 1%;
-    margin: auto;
-    border: groove;
-    border-radius: 20px;
-    font-size: 17px;
-    width: 500px;
-    
+  padding: 1%;
+  margin: auto;
+  border: groove;
+  border-radius: 20px;
+  font-size: 17px;
+  width: 500px;
 }
 
-
+/* FOOTER */
 footer {
+  background-image: linear-gradient(to top, #00f4ff, #25f1da, #5cebaf, #89e284, #b1d65c);
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 10px;
+}
 
-background-image: linear-gradient(to top, #00f4ff, #25f1da, #5cebaf, #89e284, #b1d65c);
-width: 100%;
-margin: 0;           
-padding: 10px 0;     
-    border-radius: 10px;
- }
-    
-    
- #imgFooter {
-    border-radius: 7.5px; margin: 0.5px;
-    }
-    
+#imgFooter {
+  border-radius: 7.5px;
+  margin: 0.5px;
+}
+
+/* THEME BUTTON */
 #themeButton {
-      appearance: none;
-      background-color: #000000;
-      border: 2px solid #1A1A1A;
-      border-radius: 15px;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
-      font-family: atma;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: normal;
-      margin: 0;
-      margin-top: 0.50%;
-      min-height: 60px;
-      min-width: 0;
-      outline: none;
-      padding: 16px 24px;
-      text-decoration: none;
-      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      text-align: center;
-      width: 14%;
-      will-change: transform;
-      position: absolute;
-      right: 10px;
-      top: 5px;
-    }
-    
-    #themeButton:disabled {
-      pointer-events: none;
-    }
-    
-    #themeButton:hover {
-      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-      transform: translateY(-2px);
-    }
-    
-    #themeButton:active {
-      box-shadow: none;
-      transform: translateY(0);
-    }
-  
-    .darkmode {
-      
-      background: linear-gradient(90deg, #333333 0%, #555555 100%);
-      color: #fff;
-  }
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: atma;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  margin-top: 0.50%;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  width: 14%;
+  will-change: transform;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
 
+#themeButton:disabled {
+  pointer-events: none;
+}
 
-/* Dark Mode for Cards */
+#themeButton:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#themeButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* DARK MODE BASE */
+.darkmode {
+  background: linear-gradient(90deg, #333333 0%, #555555 100%);
+  color: #fff;
+}
+
+/* DARK MODE CARDS */
 .darkmode .card {
-  background: #424242; /* Darker background for cards */
-  color: #ddd; /* Lighter text for readability */
-  border-color: #616161; 
+  background: #424242;
+  color: #ddd;
+  border-color: #616161;
 }
 
-/* Dark Mode for Form */
+/* DARK MODE FORM */
 .darkmode form {
-  background: #424242; /* Dark background for forms */
-  color: #ddd; /* Light text for forms */
+  background: #424242;
+  color: #ddd;
 }
 
-/* Dark Mode for Footer */
+/* DARK MODE FOOTER */
 .darkmode footer {
-  background: #525252; /* Dark background for footer */
-  color: #ccc; /* Light text color for footer */
+  background: #525252;
+  color: #ccc;
 }
 
-/* Additional adjustments for links or specific text within the dark mode */
-.darkmode a, .darkmode .heading, .darkmode ol {
-  color: #ccd; /* Adjust link colors in dark mode if necessary */
+/* DARK MODE LINKS & TEXT */
+.darkmode a,
+.darkmode .heading,
+.darkmode ol {
+  color: #ccd;
 }
 
-
-
-  @keyframes blink {
-    50% { border-color: transparent; }
+/* WELCOME TEXT CURSOR ANIMATION */
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 #welcome {
-    font-size: xx-large;
-    border-right: 2px solid black; /* This creates the cursor effect */
-    padding: 0 10px;
-    white-space: nowrap; /* Keeps the container on one line */
-    overflow: hidden; /* Keeps everything neat */
-    animation: blink 0.75s step-end infinite;
+  font-size: xx-large;
+  border-right: 2px solid black;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.75s step-end infinite;
 }
 
-#subButton
-{
+/* SUBMIT BUTTON */
+#subButton {
   background: rgba(100, 235, 100, 0.397);
   padding: 0.6em 1.3em;
   font-weight: 900;
@@ -272,13 +260,11 @@ padding: 10px 0;
   box-shadow: 0.1em 0.1em;
   cursor: pointer;
   width: 50%;
-  
 }
 
 #subButton:hover {
   transform: translate(-0.05em, -0.05em);
   box-shadow: 0.15em 0.15em;
-
 }
 
 #subButton:active {
@@ -286,10 +272,8 @@ padding: 10px 0;
   box-shadow: 0.05em 0.05em;
 }
 
-
-#resButton
-{
-
+/* RESET BUTTON */
+#resButton {
   background: rgb(233, 82, 82);
   padding: 0.6em 1.3em;
   font-weight: 900;
@@ -298,85 +282,75 @@ padding: 10px 0;
   border-radius: 0.4em;
   box-shadow: 0.1em 0.1em;
   cursor: pointer;
-
-
 }
 
-input,textarea::placeholder {
+/* INPUT & TEXTAREA PLACEHOLDER */
+input, textarea::placeholder {
   font-family: atma;
   font-weight: bold;
   opacity: 0.5;
 }
 
-
-#about p
-{
+/* ABOUT SECTION PARAGRAPH */
+#about p {
   margin-left: 10%;
   margin-right: 10%;
-
 }
 
-
+/* MOBILE STYLES */
 @media screen and (max-width: 650px) {
-
-  /* Make the main image bigger */
+  /* MAIN IMAGE */
   .Main {
-    width: 80%; 
+    width: 80%;
   }
 
-  /* Stack columns vertically */
+  /* STACK COLUMNS */
   .column {
     flex: 0 0 100%;
   }
 
-  /* Let cards fill the available space */
+  /* CARD ADJUSTMENTS */
   .card {
-    max-width: 80%; /* override the 400px max-width */
+    max-width: 80%;
     margin: 20px auto;
   }
 
-  
   .card img {
-    width: 50%; 
+    width: 50%;
   }
 
- 
+  /* FORM ADJUSTMENT */
   form {
-    width: 75%; 
-    max-width: 500px; 
-    font-size: 1em; 
+    width: 75%;
+    max-width: 500px;
+    font-size: 1em;
   }
 
+  /* NAV BAR ADJUSTMENTS */
   ul {
-    display: flex;            /* Use flexbox instead of floats */
-    flex-direction: row;   /* Stack items vertically */
-    align-items: center;      /* Center them horizontally */
-    font-size: medium;         /* Reduce from xx-large to avoid overflow */
-    height: auto;             /* Let nav adjust its height */
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: medium;
+    height: auto;
   }
 
-  /* Remove floats on <li> elements */
   li {
     float: none;
-    margin: 5px 0; /* Spacing between items */
+    margin: 5px 0;
   }
 
-  /* Nav links: remove left margin */
   li a {
     margin-left: 0;
   }
 
-  /* Adjust the toggle button’s size and layout */
+  /* THEME BUTTON ADJUSTMENT */
   #themeButton {
-    display: inline-block;       
-    font-size: small;     
-    padding: 8px 8px 8px 8px;   
-    white-space: nowrap; 
+    display: inline-block;
+    font-size: small;
+    padding: 8px 8px;
+    white-space: nowrap;
     width: fit-content;
     margin-top: 1.5%;
-
   }
- 
-
 }
