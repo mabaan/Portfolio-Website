@@ -54,7 +54,7 @@ form.addEventListener('submit', listening);
                     elem.innerHTML = ''; // Clear the text
                     i = 0; // Reset the counter
                     typeWriter(); // Start typing again
-                }, 2000); // Adjust the delay as needed
+                }, 2000); 
             }
         }
         
