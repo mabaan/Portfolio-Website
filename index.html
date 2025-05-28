@@ -90,59 +90,117 @@
   <!-- Contact Section / Form -->
   <section id="contact">
     <center><h1>Contact</h1></center>
-    <form id="form">
-      <label for="eventName"><b>Enter Your Name</b></label>
-      <br>
-      <input type="text" placeholder="Enter..." name="eventName" id="eventName" required>
-      <br><br>
-      <label for="emailid"><b>Enter your Email ID</b></label>
-      <br>
-      <input type="email" placeholder="abc@gmail.com" name="emailid" id="emailid" required>
-      <br><br>
-      <label for="description"><b>Brief Description</b></label>
-      <br>
-      <textarea cols="50" rows="3" placeholder="Please enter here..." name="description" id="description"></textarea>
-      <h2>Additional Info</h2>
-      <label for="q01"><b>Are you looking to hire me?</b></label>
-      <br>
-      <input type="radio" name="q0" id="q01"> Yes
-      <br>
-      <input type="radio" name="q0" id="q02"> No
-      <br>
-      <br>
-      <label for="Q1"><b>Are you looking to get in contact?</b></label>
-      <br>
-      <input type="radio" name="question1" id="question1">Yes
-      <br>
-      <input type="radio" name="question1" id="question1">No
-      <br>
-      <input type="radio" name="question1" id="question1">Maybe
-      <br><br>
-      <section>
-        <label for="q2Answer1"><b>What type of company are you?</b></label>
-        <br>
-        <input type="checkbox" name="q2Answer1" id="q2Answer1">Consulting
-        <br>
-        <input type="checkbox" name="q2Answer2" id="q2Answer2">Software Development
-        <br>
-        <input type="checkbox" name="q2Answer3" id="q2Answer3">Software as a Service
-        <br>
-        <input type="checkbox" name="q2Answer4" id="q2Answer4">Cybersecurity
-        <br>
-        <input type="checkbox" name="q2Answer5" id="q2Answer5">Other
-        <br><br>
-      </section>
-      <label for="dropdown"><b>Select the city you are located in: </b></label>
-      <br>
-      <select name="dropdown" id="dropdown">
-        <option value="CEN">Dubai</option>
-        <option value="SBA">Abu Dhabi</option>
-        <option value="CAS">Sharjah</option>
-        <option value="CAAD">Ajman</option>
-        <option value="OSA">Fujairah</option>
-        <option value="Other">Other</option>
-      </select>
-      <br><br>
+ <form id="form" action="submit.php" method="POST">
+  <label for="eventName"><b>Enter Your Name</b></label><br>
+  <input
+    type="text"
+    placeholder="Enter..."
+    name="name"
+    id="eventName"
+    required
+  ><br><br>
+
+  <label for="emailid"><b>Enter your Email ID</b></label><br>
+  <input
+    type="email"
+    placeholder="abc@gmail.com"
+    name="email"
+    id="emailid"
+    required
+  ><br><br>
+
+  <label for="description"><b>Brief Description</b></label><br>
+  <textarea
+    cols="50"
+    rows="3"
+    placeholder="Please enter here..."
+    name="description"
+    id="description"
+  ></textarea>
+
+  <h2>Additional Info</h2>
+
+  <label><b>Are you looking to hire me?</b></label><br>
+  <input
+    type="radio"
+    name="hire_me"
+    id="q01"
+    value="Yes"
+    required
+  > <label for="q01">Yes</label><br>
+  <input
+    type="radio"
+    name="hire_me"
+    id="q02"
+    value="No"
+  > <label for="q02">No</label><br><br>
+
+  <label><b>Are you looking to get in contact?</b></label><br>
+  <input
+    type="radio"
+    name="contact_me"
+    id="contactYes"
+    value="Yes"
+    required
+  > <label for="contactYes">Yes</label><br>
+  <input
+    type="radio"
+    name="contact_me"
+    id="contactNo"
+    value="No"
+  > <label for="contactNo">No</label><br>
+  <input
+    type="radio"
+    name="contact_me"
+    id="contactMaybe"
+    value="Maybe"
+  > <label for="contactMaybe">Maybe</label><br><br>
+
+  <section>
+    <label><b>What type of company are you?</b></label><br>
+    <input
+      type="checkbox"
+      name="company_type[]"
+      id="q2Answer1"
+      value="Consulting"
+    > <label for="q2Answer1">Consulting</label><br>
+    <input
+      type="checkbox"
+      name="company_type[]"
+      id="q2Answer2"
+      value="Software Development"
+    > <label for="q2Answer2">Software Development</label><br>
+    <input
+      type="checkbox"
+      name="company_type[]"
+      id="q2Answer3"
+      value="Software as a Service"
+    > <label for="q2Answer3">Software as a Service</label><br>
+    <input
+      type="checkbox"
+      name="company_type[]"
+      id="q2Answer4"
+      value="Cybersecurity"
+    > <label for="q2Answer4">Cybersecurity</label><br>
+    <input
+      type="checkbox"
+      name="company_type[]"
+      id="q2Answer5"
+      value="Other"
+    > <label for="q2Answer5">Other</label><br><br>
+  </section>
+
+  <label for="dropdown"><b>Select the city you are located in:</b></label><br>
+  <select name="city" id="dropdown" required>
+    <option value="">— Please choose —</option>
+    <option value="Dubai">Dubai</option>
+    <option value="Abu Dhabi">Abu Dhabi</option>
+    <option value="Sharjah">Sharjah</option>
+    <option value="Ajman">Ajman</option>
+    <option value="Fujairah">Fujairah</option>
+    <option value="Other">Other</option>
+  </select><br><br>
+
       <center><button type="submit" id="subButton">Submit</button></center>
       <br>
       <center><button type="reset" id="resButton">Reset</button></center>
