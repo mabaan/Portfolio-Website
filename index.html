@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBFT4KYKEQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBFT4KYKEQ');
+</script>
+
   <title>Mohammed Abaan</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +32,8 @@
     <li><a href="#" data-target="about">About</a></li>
     <li><a href="#" data-target="portfolio">Portfolio</a></li>
     <li><a href="#" data-target="contact">Contact</a></li>
+
+    
     <!-- Theme Toggle Button inside nav -->
     <center><button id="themeButton">Toggle Dark Mode</button></center>
   </ul>
@@ -33,59 +45,134 @@
   <!-- Home Section (Main Image/Welcome) -->
   <section id="home">
     <center><h1 id="welcome"></h1></center>
+    <center><img class="Main" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXFoYTVvM2wzM2x5YTh6MndsNTJ2MW9nanU4aXFsNnc3d282dGFmNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUA7aW1ddSxtVT5zzi/giphy.gif" alt="Something I find Really Cool!"></center>
   </section>
-
+<br>
   <!-- About Section -->
   <section id="about">
     <div>
       <center><h1>About</h1></center>
-      <!-- <center><img class="Main" src="one.png" alt="Me with the dean"></center> -->
+      
       <center>
         <p>
-          My name is Mohammed Abaan Imtiaz, and I am a Third-Year Computer Science Student at the American University of Sharjah. I am a highly motivated Computer Science student with a passion for programming and problem-solving. I take initiative and consistently complete projects ahead of deadlines. I am a dependable team player, recognized for effectively communicating ideas and collaborating to find innovative solutions. I am passionate about learning and stay up to date with the latest technologies, programming languages, and tools. I am interested in creating and building software applications, websites, or games.
-          I currently hold a Grade Point Average of 3.77 on a 4.00 scale and have been recognized for outstanding academic performance through multiple Academic Excellence Awards, including the Chancellor's List Award and Dean's List Awards. I am also certified in Cybersecurity through IBM, with a strong foundation in risk assessment, network security, and threat mitigation strategies. I enjoy playing football and my favourite team is FC Barcelona.
+         Hi there! I’m Mohammed Abaan, a fourth-year Computer Science student at the American University of Sharjah and a full-stack developer based in Dubai. I’m enthusiastic about bringing ideas to life—whether I’m building responsive web apps with React, Astro, and TS or training neural networks in Python and TensorFlow. I thrive working in collaborative, team-driven environments. I continually learn new tools, from AWS deployments to data-driven ML pipelines, and I love sharing what I’ve built: feel free to explore my GitHub projects and reach out if you’d like to work together!
         </p>
       </center>
       <br><br>
     </div>
+
+
+  <!-- Resume Download Button -->
+      <center>  <a 
+      href="Mohammed Abaan Resume.pdf" 
+      download 
+      class="btn download-resume"
+    >
+      Download My Resume
+    </a>
+      </center>
+      <br>
+    <!-- Other Details -->
+  
+    <div id="socials">
+    <!-- GitHub -->
+    <a class="social-icon" href="https://github.com/mabaan" target="_blank" rel="noopener noreferrer">
+      <img
+        src="https://img.icons8.com/?size=100&id=4MhUS4CzoLbx&format=png&color=000000"
+        alt="GitHub Profile"
+      />
+    </a>
+
+    <!-- LinkedIn -->
+    <a class="social-icon" href="https://www.linkedin.com/in/mohammed-abaan-0245ba289/" target="_blank" rel="noopener noreferrer">
+      <img
+        src="https://user-images.githubusercontent.com/74038190/235294012-0a55e343-37ad-4b0f-924f-c8431d9d2483.gif"
+        alt="LinkedIn Profile"
+      />
+    </a>
+
+    <!-- Discord -->
+    <a class="social-icon" href="https://discord.gg/8PbrByhYqF" target="_blank" rel="noopener noreferrer">
+      <img
+        src="https://user-images.githubusercontent.com/74038190/235294015-47144047-25ab-417c-af1b-6746820a20ff.gif"
+        alt="Join me on Discord"
+      />
+    </a>
+  </div>
+
+<br>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
-    <center><h1>Portfolio</h1></center>
-    <div class="row">
-      <!-- Card 1: Teaching Assistant -->
-      <div class="column">
-        <div class="card">
-          <h3>Teaching Assistant</h3>
-          <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/American_University_of_Sharjah_%28emblem%29.png" alt="The American University of Sharjah">
-          <p class="heading"><strong>American University of Sharjah</strong></p>
-          <ol>
-            <li>Conducted lab sessions and tutorials to reinforce lecture material.</li>
-            <li>Provided one-on-one and group support to students through office hours.</li>
-            <li>Graded assignments, quizzes, and projects, providing constructive feedback.</li>
-            <li>Facilitated discussions and encouraged student engagement during classes.</li>
-            <li>Assisted in preparing and organizing course materials and resources, including course projects and assignments.</li>
-          </ol>
-        </div>
-      </div>
-      <!-- Card 2: Data Science Intern -->
-      <div class="column">
-        <div class="card">
-          <h3>Data Science Intern</h3>
-          <img src="https://aurainsure.tech/insurance-logos/Aura-logo.png" alt="Aura Technologies">
-          <p class="heading"><strong>Aura Technologies | Dubai, UAE</strong></p>
-          <ol>
-            <li>Analyzed and processed extensive customer datasets, ensuring data accuracy and integrity for business insights.</li>
-            <li>Utilized Python and Excel for data cleaning, visualization, and trend analysis.</li>
-            <li>Participated in QA testing for web applications, identifying and documenting software bugs and usability issues.</li>
-            <li>Assisted in developing and executing test cases for software functionalities to maintain high quality and performance standards.</li>
-            <li>Developed interactive dashboards for performance monitoring.</li>
-          </ol>
-        </div>
+<section id="portfolio">
+  <center><h1>Portfolio</h1></center>
+  <div class="row">
+    <!-- Card 1: Technical Advisor -->
+    <div class="column">
+      <div class="card">
+        <h3>Technical Advisor</h3>
+        <img id = "GC_Logo"src="GC international logo.png" alt="GC International">
+        <p class="heading"><strong>GC International | Dubai, UAE</strong></p>
+        <ol>
+          <li>Spearheaded delivery for a dynamic SME: gathered requirements and launched both a public website and a secure intranet.</li>
+          <li>Engineered the end-to-end stack (Astro, React, Three.js, C#/.NET) with Airtable CMS; deployed via AWS Amplify and SES.</li>
+          <li>Implemented responsive design and SEO best practices to enhance user experience and discoverability.</li>
+          <li>Established CI/CD pipelines and conducted front-end optimization, code reviews, and performance testing with Lighthouse.</li>
+          <li>Integrated Cypress, Vitest, and pytest into testing workflows to ensure robust quality assurance.</li>
+        </ol>
       </div>
     </div>
-  </section>
+
+    <!-- Card 2: Information Technology Intern -->
+    <div class="column">
+      <div class="card">
+        <h3>Information Technology Intern</h3>
+        <img id="Etihad_Logo" src="EtihadWE logo.png" alt="Etihad Water and Electricity">
+        <p class="heading"><strong>Etihad Water and Electricity | UAE</strong></p>
+        <ol>
+          <li>Created dynamic SharePoint sites and custom .NET Framework pages using HTML/CSS/JS, jQuery, and React.</li>
+          <li>Imported, cleaned, and modeled diverse datasets in Microsoft Power BI; engineered DAX measures and built interactive dashboards.</li>
+          <li>Provisioned and configured hosts, clusters, and VMs in VMware vSphere; managed Active Directory policies with Microsoft AD and ADManager Plus.</li>
+          <li>Shadowed SOC/NOC teams, monitoring ArcSight SIEM and Operations Bridge alerts; configured firewalls and ACLs.</li>
+          <li>Participated in IT incident ticket resolution to maintain high availability and performance.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Card 3: Data Science Intern -->
+    <div class="column">
+      <div class="card">
+        <h3>Data Science Intern</h3>
+        <img src="https://aurainsure.tech/insurance-logos/Aura-logo.png" alt="Aura Technologies">
+        <p class="heading"><strong>Aura Technologies | Dubai, UAE</strong></p>
+        <ol>
+          <li>Analyzed and processed extensive customer datasets, ensuring data accuracy and integrity for business insights.</li>
+          <li>Utilized Python, SQL, and Excel for data cleaning, visualization, and trend analysis.</li>
+          <li>Participated in QA testing for web applications, identifying and documenting software bugs and usability issues.</li>
+          <li>Assisted in developing and executing test cases for software functionalities to maintain high quality and performance standards.</li>
+          <li>Generated reports on customer behavior and operational patterns to enhance data-driven strategies.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Card 4: Teaching Assistant -->
+    <div class="column">
+      <div class="card">
+        <h3>Teaching Assistant</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/American_University_of_Sharjah_%28emblem%29.png" alt="The American University of Sharjah">
+        <p class="heading"><strong>American University of Sharjah</strong></p>
+        <ol>
+          <li>Conducted lab sessions and tutorials to reinforce lecture material.</li>
+          <li>Provided one-on-one and group support to students through office hours.</li>
+          <li>Graded assignments, quizzes, and projects, providing constructive feedback.</li>
+          <li>Facilitated discussions and encouraged student engagement during classes.</li>
+          <li>Assisted in preparing and organizing course materials and resources, including course projects and assignments.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Contact Section / Form -->
   <section id="contact">
