@@ -51,12 +51,33 @@ li img {
   vertical-align: middle;
 }
 
-/* MAIN IMAGE */
+/* MAIN GIF */
 .Main {
-  border-radius: 8px;
-  width: 25%;
-  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 32%;                   /* ~25–30% width */
+  aspect-ratio: 16/9;           /* rectangular */
+  object-fit: cover;            /* fill without distortion */
+
+  /* cool borders & smoothing */
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  
+  /* subtle, smooth zoom animation */
+  animation: mainZoom 60s ease-in-out infinite;
+  pointer-events: none;
 }
+
+/* keep your existing zoom keyframes */
+@keyframes mainZoom {
+  0%   { transform: scale(1) translateY(0); }
+  50%  { transform: scale(1.05) translateY(-2%); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+
+
 
 /* GLOBAL DIV MARGINS */
 div {
@@ -68,30 +89,38 @@ div p {
   font-size: x-large;
 }
 
+/* CARDS */
+
 /* CARDS CONTAINER */
-.row {
+#portfolio .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 40px;
+  gap: 20px;            /* equal horizontal & vertical gaps */
+  padding: 40px 0;      /* top/bottom padding only */
+  max-width: 1000px;    /* constrain grid width */
+  margin: 0 auto;       /* center the grid */
+  box-sizing: border-box;
 }
 
 /* CARD COLUMNS */
 .column {
   flex: 0 0 45%;
   box-sizing: border-box;
+  display: flex;        /* allow .card to stretch */
 }
 
 /* CARD STYLES */
 .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;              /* stretch to fill column height */
   background-image: linear-gradient(to bottom, #ced6da, #c4d7e0, #b8d8e6, #acd8ec, #9fd9f2);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 20px;
   max-width: 400px;
-  margin: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -100,18 +129,33 @@ div p {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* CARD HEADER */
 .card h3 {
   text-align: center;
   color: #333;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
+/* CARD IMAGE */
 .card img {
   display: block;
   width: 25%;
   height: auto;
   margin: 0 auto 15px;
+}
+
+/* PUSH LIST TO BOTTOM IF NEEDED */
+.card ol {
+  margin-top: auto;
+}
+
+
+
+#Etihad_Logo, #GC_Logo
+{
+  width: 40%
+
+
 }
 
 .card .heading {
@@ -133,7 +177,7 @@ div p {
 
 /* FORM STYLES */
 form {
-  background-image: radial-gradient(circle, #9cd4f0, #b0d6fc, #c8d6ff, #e2d7ff, #fad7ff);
+  background: #E1EBEE;
   padding: 1%;
   margin: auto;
   border: groove;
@@ -144,12 +188,19 @@ form {
 
 /* FOOTER */
 footer {
-  background-image: linear-gradient(to top, #00f4ff, #25f1da, #5cebaf, #89e284, #b1d65c);
+  background: linear-gradient(184deg,rgba(63, 131, 209, 1) 27%, rgba(155, 197, 255, 1) 93%);
   width: 100%;
   margin: 0;
   padding: 10px 0;
-  border-radius: 10px;
+
+  /* only top border, slightly darker than the gradient start */
+  border: none;
+  border-top: 3px solid rgb(55, 119, 192);
+
+  /* round just the bottom corners */
+  border-radius: 0 0 10px 10px;
 }
+
 
 #imgFooter {
   border-radius: 7.5px;
@@ -241,7 +292,7 @@ footer {
 }
 
 #welcome {
-  font-size: xx-large;
+  font-size: xxx-large;
   border-right: 2px solid black;
   padding: 0 10px;
   white-space: nowrap;
@@ -353,4 +404,75 @@ input, textarea::placeholder {
     width: fit-content;
     margin-top: 1.5%;
   }
+}
+
+/* Resume Download */
+
+.btn:hover {
+  opacity: 0.9;
+} 
+
+.btn {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: atma;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn:focus {
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.btn:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 12px 50px;
+  }
+}
+
+/* styles.css */
+#socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.social-icon img {
+  width: 100px;
+  display: block;
 }
