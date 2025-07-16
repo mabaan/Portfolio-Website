@@ -44,4 +44,13 @@ function typeWriter() {
     }, 2000);
   }
 }
-document.addEventListener('DOMContentLoaded', typeWriter);
+document.addEventListener('DOMContentLoaded', () => {
+  typeWriter();
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('navbar');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  }
+});
