@@ -380,9 +380,9 @@ input, textarea::placeholder {
     margin: 20px auto;
   }
 
-  /* .card img {
+  .card img {
     width: 50%;
-  } */
+  }
 
   /* FORM ADJUSTMENT */
   form {
