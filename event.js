@@ -23,7 +23,11 @@ form.addEventListener('submit', listening);
 
 // DARK MODE TOGGLE - Event Listener III
 const themeButton = document.getElementById('themeButton');
-themeButton.addEventListener("click", changeTheme);
+themeButton.addEventListener("click", () => {
+  changeTheme();
+  // close the mobile menu if open
+  navbar.classList.remove('show');
+});
 function changeTheme() {
   document.body.classList.toggle('darkmode');
 }

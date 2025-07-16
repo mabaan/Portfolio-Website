@@ -380,9 +380,9 @@ input, textarea::placeholder {
     margin: 20px auto;
   }
 
-  /* .card img {
+  .card img {
     width: 50%;
-  } */
+  }
 
   /* FORM ADJUSTMENT */
   form {
@@ -400,7 +400,7 @@ input, textarea::placeholder {
     display: none;
     flex-direction: column;
     align-items: center;
-    font-size: medium;
+    font-size: large;
     height: auto;
     background-color: #333;
   }
@@ -419,16 +419,18 @@ input, textarea::placeholder {
     margin-left: 0;
     text-align: center;
     width: 100%;
+    font-size: 1.1em;
   }
 
   /* THEME BUTTON ADJUSTMENT */
   #themeButton {
-    display: inline-block;
-    font-size: small;
+    display: block;
+    position: static;
+    font-size: 1.1em;
     padding: 8px 8px;
     white-space: nowrap;
     width: fit-content;
-    margin-top: 1.5%;
+    margin: 5px auto;
   }
 
   /* Footer should span full width */
