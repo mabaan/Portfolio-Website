@@ -381,7 +381,11 @@ input, textarea::placeholder {
   }
 
   .card img {
-    width: 50%;
+    width: 30%;
+  }
+
+  #GC_Logo{
+    width: 35%;
   }
 
   /* FORM ADJUSTMENT */
