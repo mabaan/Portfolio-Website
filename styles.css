@@ -476,3 +476,11 @@ input, textarea::placeholder {
   width: 100px;
   display: block;
 }
+
+/* Fix mobile responsiveness issue with description textbox */
+#description {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;  /* include padding/border in that 100% */
+  background-color: #f0f5f6; 
+}
