@@ -1,13 +1,15 @@
-// NAV LINKS - Event Listerner I
-const navLinks = document.querySelectorAll('ul li a');
+// NAV LINKS - Event Listener I
+const navLinks = document.querySelectorAll('#navbar li a');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     const targetId = this.getAttribute('data-target');
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: 'smooth' });
     }
+    // close menu on mobile after selection
+    navbar.classList.remove('show');
   });
 });
 
@@ -25,6 +27,13 @@ themeButton.addEventListener("click", changeTheme);
 function changeTheme() {
   document.body.classList.toggle('darkmode');
 }
+
+// HAMBURGER MENU TOGGLE
+const hamburger = document.getElementById('hamburger');
+const navbar = document.getElementById('navbar');
+hamburger.addEventListener('click', () => {
+  navbar.classList.toggle('show');
+});
 
 // TYPEWRITER EFFECT
 const text = 'Welcome to my Page!';
