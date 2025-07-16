@@ -37,8 +37,9 @@ li {
 }
 
 #themeItem {
-  position: static;
+  position: relative;
   width: 14%;
+  float: right;
 }
 
 li a {
@@ -250,7 +251,7 @@ footer {
   width: 14%;
   will-change: transform;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -447,6 +448,7 @@ input, textarea::placeholder {
   }
   #themeItem {
     width: 100%;
+    float: none;
   }
   #themeButton:hover,
   #themeButton:active {
