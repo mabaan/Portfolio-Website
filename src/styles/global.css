@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for theming */
+:root {
+  --color-accent: #2AA89E;
+  --color-accent-dark: #197374;
+}
+
+[data-theme="dark"] {
+  --color-accent: #00B8D4;
+  --color-accent-dark: #008BA3;
+}
+
+/* Base element styles */
+body {
+  line-height: 1.6;
+  font-family: system-ui, sans-serif;
+}
+
+/* Utility class for buttons */
+.btn {
+  @apply inline-block px-4 py-2 rounded font-medium transition;
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-dark);
+}
