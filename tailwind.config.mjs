@@ -1,6 +1,6 @@
 // tailwind.config.mjs
-import typography from '@tailwindcss/typography'
-import forms from '@tailwindcss/forms'
+import typography from '@tailwindcss/typography';
+import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,8 +11,17 @@ export default {
   theme: {
     extend: {
       colors: {
+        /* map semantic Tailwind color names to CSS variables */
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
         accent: 'var(--color-accent)',
-        'accent-dark': 'var(--color-accent-dark)'
+        'accent-dark': 'var(--color-accent-dark)',
+        muted: 'var(--muted)',
+        success: 'var(--success)',
+        warning: 'var(--warning)',
+        danger: 'var(--danger)'
       }
     }
   },
@@ -20,4 +29,4 @@ export default {
     typography,
     forms
   ]
-}
+};
