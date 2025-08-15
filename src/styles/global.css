@@ -2,30 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS variables for theming */
+/* CSS variables for theming (light defaults + dark overrides) */
 :root {
-  --color-accent: #2AA89E;
-  --color-accent-dark: #197374;
+  --bg: #F6F8FA;
+  --surface: #FFFFFF;
+  --text-primary: #0F1724;
+  --text-secondary: #4B5563;
+
+  /* Blue accent - updated per your preference */
+  --color-accent: #0B5FFF;
+  --color-accent-dark: #063FC9;
+
+  --muted: #E6EDF3;
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --danger: #DC2626;
 }
 
+/* DARK THEME */
 [data-theme="dark"] {
-  --color-accent: #00B8D4;
-  --color-accent-dark: #008BA3;
+  --bg: #121212;
+  --surface: #1E1E1E;
+  --text-primary: #E6EEF6;
+  --text-secondary: #A6B0BC;
+
+  --color-accent: #0B84FF;    /* slightly brighter for dark */
+  --color-accent-dark: #0660C0;
+
+  --muted: #16202A;
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --danger: #DC2626;
 }
 
 /* Base element styles */
+html, body { height: 100%; }
 body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-primary);
   line-height: 1.6;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Utility class for buttons */
+/* Semantic helpers */
+.surface { background-color: var(--surface); }
+.border-muted { border-color: var(--muted); }
+
+/* Button utility using @apply for layout and CSS var for color */
 .btn {
   @apply inline-block px-4 py-2 rounded font-medium transition;
   background-color: var(--color-accent);
   color: white;
+  text-decoration: none;
 }
-
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: var(--color-accent-dark);
+  outline: none;
 }
