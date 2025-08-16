@@ -4,16 +4,15 @@
 
 /* CSS variables for theming (light defaults + dark overrides) */
 :root {
-  --bg: #F6F8FA;
+  --bg: #F3F6F0; /* soft greenish white */
   --surface: #FFFFFF;
-  --text-primary: #0F1724;
-  --text-secondary: #4B5563;
+  --text-primary: #1E3A2F; /* deep olive green */
+  --text-secondary: #475F55; /* muted sage */
 
-  /* Blue accent - updated per your preference */
-  --color-accent: #0B5FFF;
-  --color-accent-dark: #063FC9;
+  --color-accent: #D97706;       /* burnt orange */
+  --color-accent-dark: #B45309;
 
-  --muted: #E6EDF3;
+  --muted: #DDE6DC;
   --success: #16A34A;
   --warning: #F59E0B;
   --danger: #DC2626;
@@ -21,28 +20,30 @@
 
 /* DARK THEME */
 [data-theme="dark"] {
-  --bg: #121212;
-  --surface: #1E1E1E;
-  --text-primary: #E6EEF6;
-  --text-secondary: #A6B0BC;
+  --bg: #0C1C17; /* dark green-gray */
+  --surface: #1A2B26;
+  --text-primary: #D1E8DC; /* sage-tinted white */
+  --text-secondary: #94A89F;
 
-  --color-accent: #0B84FF;    /* slightly brighter for dark */
-  --color-accent-dark: #0660C0;
+  --color-accent: #F4A261;     /* warm orange */
+  --color-accent-dark: #E76F51;
 
-  --muted: #16202A;
-  --success: #16A34A;
-  --warning: #F59E0B;
-  --danger: #DC2626;
+  --muted: #1F2F2A;
+  --success: #22C55E;
+  --warning: #FBBF24;
+  --danger: #EF4444;
 }
 
 /* Base element styles */
-html, body { height: 100%; }
-body {
+html, body {
+  height: 100%;
   margin: 0;
   background-color: var(--bg);
   color: var(--text-primary);
+  font-family: 'Inter', 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,14 +52,38 @@ body {
 .surface { background-color: var(--surface); }
 .border-muted { border-color: var(--muted); }
 
-/* Button utility using @apply for layout and CSS var for color */
+/* Link styling */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+/* Button utility with smooth interactions */
 .btn {
-  @apply inline-block px-4 py-2 rounded font-medium transition;
+  @apply inline-block px-5 py-2.5 rounded-md font-semibold text-sm transition-transform shadow-sm;
   background-color: var(--color-accent);
   color: white;
   text-decoration: none;
 }
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   background-color: var(--color-accent-dark);
+  transform: scale(1.03);
   outline: none;
+}
+
+/* Form inputs */
+input, textarea, select {
+  @apply rounded border px-3 py-2 w-full;
+  border-color: var(--muted);
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }

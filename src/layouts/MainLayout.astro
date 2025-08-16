@@ -5,6 +5,8 @@ import ThemeToggle from '../components/ThemeToggle';
 const YEAR = new Date().getFullYear();
 const resumeHref = '/assets/Mohammed%20Abaan%20Resume.pdf';
 const github = 'https://github.com/mabaan';
+const linkedin = 'https://linkedin.com/in/mohammed-abaan-0245ba289';
+const discord = 'https://discord.gg/your-discord-id';
 const email = 'abaan7500@gmail.com';
 const phone = '+971 50 7159 765';
 ---
@@ -13,7 +15,8 @@ const phone = '+971 50 7159 765';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Mohammed Abaan</title>
+    <title>Mohammed Abaan | Portfolio</title>
+    <meta name="description" content="Portfolio of Mohammed Abaan, Computer Science student and full-stack developer in Dubai. Projects, experience, resume, and contact." />
 
     <script>
       (function() {
@@ -33,32 +36,22 @@ const phone = '+971 50 7159 765';
   <body class="bg-bg text-text-primary min-h-screen antialiased">
     <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:bg-surface focus:shadow rounded" href="#page-content">Skip to content</a>
 
-    <!-- Navbar is a React component - hydrate on client -->
     <Navbar client:load />
 
-    <!-- ThemeToggle is a small React component; we mount it immediately so it hydrates
-         We also inject it into the navbar's theme-toggle slot after hydration so the markup stays accessible.
-    -->
     <div style="display:none" id="theme-toggle-hydrate">
       <ThemeToggle client:load />
     </div>
-
     <script>
-      // After ThemeToggle hydrates, move its element into the navbar slot
-      (function () {
-        // wait for DOM + microtask
-        requestAnimationFrame(() => {
-          const hydrateWrapper = document.getElementById('theme-toggle-hydrate');
-          const slot = document.getElementById('theme-toggle-slot');
-          if (hydrateWrapper && slot) {
-            // move first child (the React component) into the navbar
-            while (hydrateWrapper.firstChild) {
-              slot.appendChild(hydrateWrapper.firstChild);
-            }
-            hydrateWrapper.remove();
+      requestAnimationFrame(() => {
+        const hydrateWrapper = document.getElementById('theme-toggle-hydrate');
+        const slot = document.getElementById('theme-toggle-slot');
+        if (hydrateWrapper && slot) {
+          while (hydrateWrapper.firstChild) {
+            slot.appendChild(hydrateWrapper.firstChild);
           }
-        });
-      })();
+          hydrateWrapper.remove();
+        }
+      });
     </script>
 
     <main id="page-content" class="max-w-6xl mx-auto px-6 py-12">
@@ -77,13 +70,13 @@ const phone = '+971 50 7159 765';
           </div>
           <p class="mt-4 text-sm text-text-secondary max-w-md">I build fast, accessible web experiences and data solutions. Based in UAE, open to opportunities and collaborations.</p>
         </div>
-
         <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
           <a href={github} class="text-text-secondary hover:text-text-primary">GitHub</a>
+          <a href={linkedin} class="text-text-secondary hover:text-text-primary">LinkedIn</a>
+          <a href={discord} class="text-text-secondary hover:text-text-primary">Discord</a>
           <a href={resumeHref} class="btn inline-block">Download resume</a>
         </div>
       </div>
-
       <div class="text-center text-sm text-text-secondary py-6">
         © {YEAR} Mohammed Abaan • Built with Astro + Tailwind
       </div>
