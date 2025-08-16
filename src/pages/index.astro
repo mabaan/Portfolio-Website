@@ -1,86 +1,136 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import '../styles/global.css';
 
-const github = 'https://github.com/mabaan';
-const featured = [
+const socials = [
+  { label: "GitHub", href: "https://github.com/mabaan", icon: "github" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/mohammed-abaan-0245ba289", icon: "linkedin" },
+  { label: "Discord", href: "https://discord.gg/your-discord-id", icon: "discord" }
+];
+
+const techStack = [
+  { name: "Astro", icon: "/icons/astro.svg" },
+  { name: "React", icon: "/icons/react.svg" },
+  { name: "Python", icon: "/icons/python.svg" },
+  { name: "C++", icon: "/icons/cpp.svg" },
+  { name: "SQL", icon: "/icons/sql.svg" },
+  { name: "Tailwind", icon: "/icons/tailwind.svg" }
+];
+
+const featuredProjects = [
   {
-    id: 'company-website',
-    title: 'Company Website (GC International)',
-    desc: 'Public company site with Three.js homepage, Astro + React, Airtable CMS integration.',
-    href: 'https://github.com/mabaan/Company-Website'
+    title: "Company Website (GC International)",
+    desc: "Public company site with Three.js homepage, Astro + React, Airtable CMS integration.",
+    href: "https://github.com/mabaan/Company-Website",
+    img: "/images/company-website.png",
+    tech: ["Astro", "React", "Three.js", "Airtable"]
   },
   {
-    id: 'smartmealz',
-    title: 'SmartMealz',
-    desc: 'Full-stack meal-planning platform with BMI and calorie tracking.',
-    href: 'https://github.com/mabaan/Smart-Mealz'
+    title: "SmartMealz",
+    desc: "Full-stack meal-planning platform with BMI and calorie tracking.",
+    href: "https://github.com/mabaan/Smart-Mealz",
+    img: "/images/smartmealz.png",
+    tech: ["React", "Node.js", "MySQL"]
   },
   {
-    id: 'malware-cnn',
-    title: 'Malware Classification (CNN)',
-    desc: 'PyTorch CNN for malware classification; image-based representation of binaries.',
-    href: 'https://github.com/mabaan/Malware-Classification-using-CNNs'
-  },
-  {
-    id: 'anime-reco',
-    title: 'Anime Recommendation Model',
-    desc: 'Hybrid recommender (TF-IDF and CF) deployed with React and Flask.',
-    href: 'https://github.com/mabaan/Anime-Recommendation-Model'
+    title: "Malware Classification (CNN)",
+    desc: "PyTorch CNN for malware classification; image-based representation of binaries.",
+    href: "https://github.com/mabaan/Malware-Classification-using-CNNs",
+    img: "/images/malware-cnn.png",
+    tech: ["Python", "PyTorch", "CNN"]
   }
 ];
+
+const resumeHref = "/assets/Mohammed%20Abaan%20Resume.pdf";
+const quote = "“Strive not to be a success, but rather to be of value.” – Albert Einstein";
 ---
 <MainLayout>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-8">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-12">
     <div>
       <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-text-primary">
         Hi, I am <span class="text-accent">Mohammed Abaan</span>.
       </h1>
       <p class="mt-4 text-lg text-text-secondary max-w-xl">
-        I build fast, accessible web apps and data solutions. I work with Astro, React, Python, and modern web tooling to ship high-quality products and research.
+        Computer Science Student & Full-Stack Developer in Dubai. <br />
+        4th year at AUS, passionate about web development, machine learning, and creative digital solutions.<br />
+        I build fast, accessible web apps and data platforms with Astro, React, Python, and modern web tooling.
       </p>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#projects" class="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg shadow">View projects</a>
-        <a href="/contact" class="border border-muted px-5 py-3 rounded-lg text-text-primary">Contact</a>
-        <a href="/assets/Mohammed%20Abaan%20Resume.pdf" class="hidden sm:inline-block border border-muted px-4 py-2 rounded-lg text-sm">Download resume</a>
-        <a href={github} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-text-secondary hover:text-text-primary border border-transparent hover:border-muted px-3 py-2 rounded">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden><path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.12 3.29 9.46 7.86 10.99.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.97-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.95.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.05 11.05 0 012.88-.39 11.05 11.05 0 012.88.39c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.45-2.7 5.42-5.27 5.71.41.35.77 1.05.77 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.66.79.55A10.53 10.53 0 0023.5 12.02C23.5 5.73 18.27.5 12 .5z"/></svg>
-          View on GitHub
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href={resumeHref} class="btn">Download Resume</a>
+        <a href="https://github.com/mabaan" target="_blank" rel="noopener noreferrer" class="btn bg-surface text-text-primary border border-muted">
+          GitHub
         </a>
+        <a href="https://linkedin.com/in/mohammed-abaan-0245ba289" target="_blank" rel="noopener noreferrer" class="btn bg-surface text-text-primary border border-muted">
+          LinkedIn
+        </a>
+        <a href="/contact" class="btn bg-accent text-white">Contact</a>
       </div>
 
-      <div class="mt-6 text-sm text-text-secondary">
-        Based in UAE, open to freelance and full-time roles
+      <div class="mt-6 flex items-center gap-4">
+        {socials.map(s => (
+          <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} class="hover:scale-110 transition">
+            <img src={`/icons/${s.icon}.svg`} alt={s.label} class="w-6 h-6" />
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-8">
+        <span class="text-xs text-muted">Based in UAE, open to freelance and full-time roles</span>
       </div>
     </div>
-
-    <div class="flex items-center justify-center">
-      <div class="w-full max-w-md aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-accent/80 to-accent-dark/80 flex items-center justify-center text-white shadow-lg">
-        <div class="text-center px-6">
-          <div class="text-lg font-semibold">Portfolio Visual</div>
-          <div class="text-sm mt-2 text-white/90">Placeholder for screenshot or 3D model</div>
-        </div>
+    <div class="flex flex-col items-center">
+      <img src="/images/profile-animated.gif" alt="Mohammed Abaan" class="rounded-2xl w-48 h-48 object-cover shadow-lg mb-6" />
+      <div class="bg-surface border border-muted rounded-2xl p-4 text-center shadow">
+        <span class="text-text-secondary">{quote}</span>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED PROJECTS -->
-  <section id="projects" class="mt-12">
-    <h2 class="text-2xl font-semibold text-text-primary mb-6">Featured projects</h2>
-    <div class="grid sm:grid-cols-2 gap-6">
-      {featured.map(p => (
+  <!-- Tech Stack Preview -->
+  <section class="mt-12">
+    <h2 class="text-xl font-bold text-text-primary mb-4">Tech Stack</h2>
+    <div class="flex flex-wrap gap-6">
+      {techStack.map(t => (
+        <div class="flex flex-col items-center justify-center gap-2 bg-surface border border-muted rounded-xl px-4 py-2 shadow-sm">
+          <img src={t.icon} alt={t.name} class="w-8 h-8" />
+          <span class="text-xs text-text-secondary">{t.name}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section id="projects" class="mt-16">
+    <h2 class="text-2xl font-semibold text-text-primary mb-6">Featured Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {featuredProjects.map(p => (
         <article class="bg-surface border border-muted rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <img src={p.img} alt={p.title} class="rounded-xl w-full h-40 object-cover mb-4" />
           <h3 class="text-lg font-semibold text-text-primary">
             <a class="hover:underline" href={p.href} target="_blank" rel="noopener noreferrer">{p.title}</a>
           </h3>
           <p class="text-text-secondary mt-2">{p.desc}</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {p.tech.map(tech => (
+              <span class="bg-muted text-xs px-2 py-1 rounded">{tech}</span>
+            ))}
+          </div>
           <div class="mt-4 flex items-center gap-3">
-            <a href={p.href} class="text-sm text-accent hover:underline" target="_blank" rel="noopener noreferrer">View repo</a>
-            <a href="/projects" class="text-sm text-text-secondary hover:text-text-primary">Read details</a>
+            <a href={p.href} class="text-sm text-accent hover:underline" target="_blank" rel="noopener noreferrer">View Repo</a>
           </div>
         </article>
       ))}
+    </div>
+  </section>
+
+  <!-- About Me / Personal Touch -->
+  <section class="mt-16">
+    <div class="bg-surface border border-muted rounded-2xl p-8 text-center shadow">
+      <h3 class="text-xl font-semibold mb-2">A Little About Me</h3>
+      <p class="text-text-secondary max-w-2xl mx-auto">
+        Outside of code, I love anime, hiking, and exploring new tech. I'm always learning — from machine learning and data science to cloud deployments and UI design.<br/>
+        My goal: Build tools people love and make a positive impact in tech.
+      </p>
     </div>
   </section>
 
@@ -88,7 +138,7 @@ const featured = [
   <section class="mt-14">
     <div class="bg-surface border border-muted rounded-2xl p-8 text-center">
       <h3 class="text-xl font-semibold">Let us work together</h3>
-      <p class="text-text-secondary mt-2">If you would like to collaborate or have a role to discuss, I would love to hear from you.</p>
+      <p class="text-text-secondary mt-2">If you’d like to collaborate or have a role to discuss, let’s connect!</p>
       <div class="mt-4">
         <a href="/contact" class="btn inline-block">Get in touch</a>
       </div>
