@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// Import ThemeToggle directly!
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar(): React.ReactElement {
@@ -38,18 +37,29 @@ export default function Navbar(): React.ReactElement {
         }}
       >
         {/* Logo and Brand */}
-        <a href="/" className="flex items-center gap-3 no-underline hover:no-underline">
-          <img
-            src="/portfolio logo.png"
-            alt="Logo"
-            className="h-10 w-10 object-contain"
-            style={{ minWidth: 40 }}
-          />
-          <span className="font-extrabold text-xl tracking-wide" style={{ color: 'var(--text-primary)' }}>
+        <div className="flex items-center" style={{ flex: '0 0 auto' }}>
+          <a href="/" className="flex items-center gap-3 no-underline hover:no-underline">
+            <img
+              src="/portfolio logo.png"
+              alt="Logo"
+              className="h-10 w-10 object-contain"
+              style={{ minWidth: 40 }}
+            />
+          </a>
+          {/* Move brand text closer to center */}
+          <span
+            className="font-extrabold text-xl tracking-wide"
+            style={{
+              color: 'var(--text-primary)',
+              marginLeft: '3vw',
+              minWidth: 0,
+              whiteSpace: 'nowrap',
+            }}
+          >
             <span style={{ color: 'var(--color-accent)' }}>Mohammed </span>
             <span style={{ color: 'var(--text-primary)' }}>Abaan</span>
           </span>
-        </a>
+        </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-10 items-center ml-8 flex-1 justify-center">
@@ -137,7 +147,11 @@ export default function Navbar(): React.ReactElement {
                 className="h-8 w-8 object-contain"
                 style={{ minWidth: 32 }}
               />
-              <span className="font-extrabold text-lg tracking-tight whitespace-nowrap leading-none text-[var(--text-primary)]">
+              {/* Move brand text more towards center on mobile */}
+              <span
+                className="font-extrabold text-lg tracking-tight whitespace-nowrap leading-none text-[var(--text-primary)]"
+                style={{ marginLeft: '8vw' }}
+              >
                 <span style={{ color: 'var(--color-accent)' }}>Mohammed </span>
                 <span style={{ color: 'var(--text-primary)' }}>Abaan</span>
               </span>
@@ -161,12 +175,12 @@ export default function Navbar(): React.ReactElement {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`no-underline block rounded-lg px-3 py-3 text-base font-semibold
-                    transition ${
-                      isActive
-                        ? 'text-[var(--color-accent)] bg-muted font-extrabold'
-                        : 'text-[var(--text-primary)] hover:bg-muted hover:text-[var(--color-accent)]'
-                    }`}
+                  className={`block rounded-lg px-3 py-3 text-base font-semibold transition no-underline ${
+                    isActive
+                      ? 'text-[var(--color-accent)] bg-muted font-bold'
+                      : 'text-[var(--text-primary)] hover:bg-muted hover:text-[var(--color-accent)]'
+                  }`}
+                  style={isActive ? { fontWeight: 'bold' } : {}}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
