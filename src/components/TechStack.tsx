@@ -78,6 +78,14 @@ const SVGs = {
      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#FCB400" d="M44.654 9.056 7.37 24.483c-2.073.858-2.052 3.804.034 4.63l37.44 14.847a13.9 13.9 0 0 0 10.242 0l37.439-14.847c2.086-.826 2.108-3.771.034-4.63L55.277 9.057a13.9 13.9 0 0 0-10.624 0"/><path fill="#18BFFF" d="M53.287 52.067v37.089a2.498 2.498 0 0 0 3.418 2.322l41.718-16.193A2.5 2.5 0 0 0 100 72.963V35.875a2.498 2.498 0 0 0-3.418-2.322L54.864 49.745a2.5 2.5 0 0 0-1.577 2.322"/><path fill="#F82B60" d="m43.545 53.98-12.381 5.98-1.257.607L3.77 73.09C2.115 73.889 0 72.681 0 70.841V36.03c0-.666.341-1.24.8-1.673q.282-.282.632-.475c.624-.375 1.515-.475 2.273-.175L43.337 49.41c2.014.8 2.172 3.622.208 4.571"/><path fill="#000" fill-opacity=".25" d="m43.545 53.98-12.381 5.98L.799 34.356q.284-.281.633-.474c.624-.375 1.515-.475 2.273-.175L43.337 49.41c2.014.8 2.172 3.622.208 4.571"/></svg>
     ),
   },
+  Git: {
+    light: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#DE4C36" d="M98.114 45.544 54.454 1.886a6.44 6.44 0 0 0-9.108 0l-9.066 9.066 11.5 11.501a7.65 7.65 0 0 1 7.869 1.834 7.66 7.66 0 0 1 1.817 7.916L68.55 43.287c2.682-.923 5.776-.326 7.918 1.82a7.66 7.66 0 0 1 0 10.836 7.662 7.662 0 0 1-12.508-8.335L53.623 37.271v27.202a7.663 7.663 0 0 1 2.026 12.288 7.66 7.66 0 0 1-10.836 0 7.663 7.663 0 0 1 2.508-12.51V36.795a7.6 7.6 0 0 1-2.508-1.672 7.66 7.66 0 0 1-1.651-8.377l-11.338-11.34L1.887 45.344a6.44 6.44 0 0 0 0 9.11l43.661 43.659a6.44 6.44 0 0 0 9.108 0l43.458-43.457a6.444 6.444 0 0 0 0-9.11"/></svg>
+    ),
+    dark: (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#DE4C36" d="M98.114 45.544 54.454 1.886a6.44 6.44 0 0 0-9.108 0l-9.066 9.066 11.5 11.501a7.65 7.65 0 0 1 7.869 1.834 7.66 7.66 0 0 1 1.817 7.916L68.55 43.287c2.682-.923 5.776-.326 7.918 1.82a7.66 7.66 0 0 1 0 10.836 7.662 7.662 0 0 1-12.508-8.335L53.623 37.271v27.202a7.663 7.663 0 0 1 2.026 12.288 7.66 7.66 0 0 1-10.836 0 7.663 7.663 0 0 1 2.508-12.51V36.795a7.6 7.6 0 0 1-2.508-1.672 7.66 7.66 0 0 1-1.651-8.377l-11.338-11.34L1.887 45.344a6.44 6.44 0 0 0 0 9.11l43.661 43.659a6.44 6.44 0 0 0 9.108 0l43.458-43.457a6.444 6.444 0 0 0 0-9.11"/></svg>
+    ),
+  },
   Cloudinary: {
     light: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#3448C5" d="M81.113 40.286A33.45 33.45 0 0 0 49.486 17a32.82 32.82 0 0 0-29.1 17.289 24.752 24.752 0 0 0-5.973 46.852l.621.282h.042v-7.041a18.464 18.464 0 0 1 7.695-34.096l1.74-.182.762-1.566a26.63 26.63 0 0 1 24.213-15.267 27.09 27.09 0 0 1 26.135 20.71l.597 2.369h2.485a15.35 15.35 0 0 1 15.034 15.29c0 5.84-3.37 10.62-9.111 13.039v6.676l.414-.132C94.268 78.2 100 70.695 100 61.64a21.695 21.695 0 0 0-18.887-21.355"/><path fill="#3448C5" d="m37.342 80.611 1.375 1.375a.274.274 0 0 1-.19.464H27.674a4.97 4.97 0 0 1-4.97-4.97V56.406a.273.273 0 0 0-.274-.273h-2.32a.274.274 0 0 1-.198-.464l9.211-9.211a.273.273 0 0 1 .39 0l9.203 9.211a.274.274 0 0 1-.19.464h-2.353a.28.28 0 0 0-.282.273v20.71a4.97 4.97 0 0 0 1.45 3.495m20.353 0 1.383 1.375a.273.273 0 0 1-.199.464H48.053a4.97 4.97 0 0 1-4.97-4.97V61.733a.28.28 0 0 0-.274-.282h-2.344a.274.274 0 0 1-.19-.464l9.202-9.195a.273.273 0 0 1 .39 0l9.211 9.179a.273.273 0 0 1-.199.464h-2.352a.28.28 0 0 0-.274.281v15.4a4.97 4.97 0 0 0 1.442 3.495m20.361 0 1.375 1.375a.274.274 0 0 1-.19.464H68.38a4.97 4.97 0 0 1-4.97-4.97V67.018a.274.274 0 0 0-.274-.274h-2.32a.274.274 0 0 1-.19-.472l9.212-9.203a.264.264 0 0 1 .38 0l9.212 9.203a.272.272 0 0 1-.19.472h-2.36a.273.273 0 0 0-.274.274v10.097a4.97 4.97 0 0 0 1.45 3.496"/></svg>
@@ -86,64 +94,170 @@ const SVGs = {
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#3448C5" d="M81.113 40.286A33.45 33.45 0 0 0 49.486 17a32.82 32.82 0 0 0-29.1 17.289 24.752 24.752 0 0 0-5.973 46.852l.621.282h.042v-7.041a18.464 18.464 0 0 1 7.695-34.096l1.74-.182.762-1.566a26.63 26.63 0 0 1 24.213-15.267 27.09 27.09 0 0 1 26.135 20.71l.597 2.369h2.485a15.35 15.35 0 0 1 15.034 15.29c0 5.84-3.37 10.62-9.111 13.039v6.676l.414-.132C94.268 78.2 100 70.695 100 61.64a21.695 21.695 0 0 0-18.887-21.355"/><path fill="#3448C5" d="m37.342 80.611 1.375 1.375a.274.274 0 0 1-.19.464H27.674a4.97 4.97 0 0 1-4.97-4.97V56.406a.273.273 0 0 0-.274-.273h-2.32a.274.274 0 0 1-.198-.464l9.211-9.211a.273.273 0 0 1 .39 0l9.203 9.211a.274.274 0 0 1-.19.464h-2.353a.28.28 0 0 0-.282.273v20.71a4.97 4.97 0 0 0 1.45 3.495m20.353 0 1.383 1.375a.273.273 0 0 1-.199.464H48.053a4.97 4.97 0 0 1-4.97-4.97V61.733a.28.28 0 0 0-.274-.282h-2.344a.274.274 0 0 1-.19-.464l9.202-9.195a.273.273 0 0 1 .39 0l9.211 9.179a.273.273 0 0 1-.199.464h-2.352a.28.28 0 0 0-.274.281v15.4a4.97 4.97 0 0 0 1.442 3.495m20.361 0 1.375 1.375a.274.274 0 0 1-.19.464H68.38a4.97 4.97 0 0 1-4.97-4.97V67.018a.274.274 0 0 0-.274-.274h-2.32a.274.274 0 0 1-.19-.472l9.212-9.203a.264.264 0 0 1 .38 0l9.212 9.203a.272.272 0 0 1-.19.472h-2.36a.273.273 0 0 0-.274.274v10.097a4.97 4.97 0 0 0 1.45 3.496"/></svg>
     ),
   },
+  Three: {
+    light: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 103 104"><path stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.287" d="M26.702 102 2 2l99.023 28.51z" clip-rule="evenodd"/><path stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.287" d="m51.493 16.257 12.342 50.015L14.35 52.013z" clip-rule="evenodd"/><path stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.287" d="m39.215 58.797-6.13-24.846 24.584 7.057zM26.952 9.136l6.13 24.845-24.584-7.057zm49.167 14.163 6.13 24.846-24.585-7.058zM39.217 58.814l6.13 24.845-24.584-7.057z" clip-rule="evenodd"/></svg>
+    ),
+      dark: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 103 104"><path stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.287" d="M26.702 102 2 2l99.023 28.51z" clip-rule="evenodd"/><path stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.287" d="m51.493 16.257 12.342 50.015L14.35 52.013z" clip-rule="evenodd"/><path stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.287" d="m39.215 58.797-6.13-24.846 24.584 7.057zM26.952 9.136l6.13 24.845-24.584-7.057zm49.167 14.163 6.13 24.846-24.585-7.058zM39.217 58.814l6.13 24.845-24.584-7.057z" clip-rule="evenodd"/></svg>
+      ),
+    },
+
+    GSAP: {
+    light: (
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#0AE448" d="M50.21 44.196a.56.56 0 0 0 .169-.383h.002c.07-2.76-.569-4.916-1.897-6.408-1.403-1.576-3.552-2.385-6.387-2.405-2.83 0-5.269.884-7.052 2.557-1.686 1.584-2.637 3.775-2.68 6.171-.072 4.132 2.262 6.76 4.865 9.302 2.015 2.074 2.385 3.099 2.365 4.268-.025 1.353-.669 2.13-1.768 2.13-.453 0-.817-.141-1.078-.418-.408-.428-.588-1.201-.522-2.236a.5.5 0 0 0-.108-.392.56.56 0 0 0-.43-.212h-5.95a.557.557 0 0 0-.559.54c-.14 2.87.529 5.093 1.987 6.608 1.436 1.491 3.596 2.247 6.423 2.247 5.537 0 9.175-3.459 9.27-8.81.058-3.309-1.15-5.812-4.162-8.638-2.288-2.22-3.092-3.511-3.067-4.933.023-1.274.789-2.004 1.977-2.004s1.769.817 1.769 2.495a.69.69 0 0 0 .691.678h5.753a.56.56 0 0 0 .388-.157"/><path fill="#0AE448" d="M32.259 49.29v-.014h-.003c.005-.277-.188-.53-.46-.567q-.037-.006-.074-.005H21.197v.013c-.272.032-.493.217-.547.46l-1.096 4.762a.43.43 0 0 0 .089.369.6.6 0 0 0 .446.206h1.604c.092 0 .213.013.257.07.042.055.039.178-.005.337-.312 1.145-1.053 2.399-1.974 3.124-.922.724-2.445 1.158-3.511.505-1.203-.74-1.407-2.521-1.457-3.789-.105-2.722.428-5.456 1.474-7.972.749-1.801 2.161-5.051 4.555-5.051 1.357 0 2.04 1.12 2.091 3.423a.43.43 0 0 0 .415.417h6.245a.56.56 0 0 0 .56-.546c-.005-3.33-.765-5.872-2.262-7.561-1.416-1.597-3.452-2.397-6.045-2.374-8.524 0-12.95 8.612-13.888 17.147-.52 4.546.338 8.32 2.415 10.624 1.57 1.744 3.423 2.628 6.17 2.628 3.057 0 5.346-.679 7.202-2.134 2.182-1.708 3.835-4.554 5.056-8.694a.22.22 0 0 1 .211-.16h1.324c.31 0 .579-.196.638-.465z"/><path fill="#0AE448" fill-rule="evenodd" d="m68.209 64.558.037-28.459a.535.535 0 0 0-.539-.543h-8.902c-.3 0-.431.258-.517.428l-12.89 28.4v.005l-.005.008c-.143.349.128.723.506.723h6.223q.505.002.669-.314l1.235-2.97c.152-.396.18-.433.613-.433h5.946c.413 0 .422.008.415.413l-.133 2.76a.54.54 0 0 0 .33.503.5.5 0 0 0 .208.04h6.287a.53.53 0 0 0 .41-.185.47.47 0 0 0 .107-.376m-11.014-9.501q-.07 0-.14-.005a.15.15 0 0 1-.126-.09.15.15 0 0 1-.007-.098 3 3 0 0 1 .055-.165l4.458-11.032a3 3 0 0 1 .139-.319c.072-.148.16-.159.187-.048.024.091-.511 11.327-.511 11.327-.042.42-.061.438-.476.473l-3.575-.041h-.008zm18.97-19.501h4.726l.005-.003c6.971 0 10.451 3.16 10.341 9.395-.128 7.306-4.58 12.675-11.284 13.913-.953.175-1.922.244-2.89.239l-3.237-.015a.204.204 0 0 0-.203.198.19.19 0 0 0 .105.173l.394.205 1.019.532 1.024.533.318.165c.226.118.313.314.263.566l-.718 3.237c-.059.27-.276.426-.594.426h-5.907a.58.58 0 0 1-.445-.206.43.43 0 0 1-.09-.37l6.578-28.558c.065-.297.345-.43.595-.43m2.991 16.995h.126c3.103-.126 4.794-3.792 4.856-7.348.036-2.055-.714-3.259-2.059-3.3h-4.32a.2.2 0 0 0-.175.299.2.2 0 0 0 .076.072s2.733 1.441 2.92 1.545c.147.08.15.217.101.454 0 .006-.418 1.844-.859 3.782-.492 2.163-1.01 4.451-1.008 4.455.008.01.058.04.342.04" clip-rule="evenodd"/></svg>
+    ),
+     dark: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#0AE448" d="M50.21 44.196a.56.56 0 0 0 .169-.383h.002c.07-2.76-.569-4.916-1.897-6.408-1.403-1.576-3.552-2.385-6.387-2.405-2.83 0-5.269.884-7.052 2.557-1.686 1.584-2.637 3.775-2.68 6.171-.072 4.132 2.262 6.76 4.865 9.302 2.015 2.074 2.385 3.099 2.365 4.268-.025 1.353-.669 2.13-1.768 2.13-.453 0-.817-.141-1.078-.418-.408-.428-.588-1.201-.522-2.236a.5.5 0 0 0-.108-.392.56.56 0 0 0-.43-.212h-5.95a.557.557 0 0 0-.559.54c-.14 2.87.529 5.093 1.987 6.608 1.436 1.491 3.596 2.247 6.423 2.247 5.537 0 9.175-3.459 9.27-8.81.058-3.309-1.15-5.812-4.162-8.638-2.288-2.22-3.092-3.511-3.067-4.933.023-1.274.789-2.004 1.977-2.004s1.769.817 1.769 2.495a.69.69 0 0 0 .691.678h5.753a.56.56 0 0 0 .388-.157"/><path fill="#0AE448" d="M32.259 49.29v-.014h-.003c.005-.277-.188-.53-.46-.567q-.037-.006-.074-.005H21.197v.013c-.272.032-.493.217-.547.46l-1.096 4.762a.43.43 0 0 0 .089.369.6.6 0 0 0 .446.206h1.604c.092 0 .213.013.257.07.042.055.039.178-.005.337-.312 1.145-1.053 2.399-1.974 3.124-.922.724-2.445 1.158-3.511.505-1.203-.74-1.407-2.521-1.457-3.789-.105-2.722.428-5.456 1.474-7.972.749-1.801 2.161-5.051 4.555-5.051 1.357 0 2.04 1.12 2.091 3.423a.43.43 0 0 0 .415.417h6.245a.56.56 0 0 0 .56-.546c-.005-3.33-.765-5.872-2.262-7.561-1.416-1.597-3.452-2.397-6.045-2.374-8.524 0-12.95 8.612-13.888 17.147-.52 4.546.338 8.32 2.415 10.624 1.57 1.744 3.423 2.628 6.17 2.628 3.057 0 5.346-.679 7.202-2.134 2.182-1.708 3.835-4.554 5.056-8.694a.22.22 0 0 1 .211-.16h1.324c.31 0 .579-.196.638-.465z"/><path fill="#0AE448" fill-rule="evenodd" d="m68.209 64.558.037-28.459a.535.535 0 0 0-.539-.543h-8.902c-.3 0-.431.258-.517.428l-12.89 28.4v.005l-.005.008c-.143.349.128.723.506.723h6.223q.505.002.669-.314l1.235-2.97c.152-.396.18-.433.613-.433h5.946c.413 0 .422.008.415.413l-.133 2.76a.54.54 0 0 0 .33.503.5.5 0 0 0 .208.04h6.287a.53.53 0 0 0 .41-.185.47.47 0 0 0 .107-.376m-11.014-9.501q-.07 0-.14-.005a.15.15 0 0 1-.126-.09.15.15 0 0 1-.007-.098 3 3 0 0 1 .055-.165l4.458-11.032a3 3 0 0 1 .139-.319c.072-.148.16-.159.187-.048.024.091-.511 11.327-.511 11.327-.042.42-.061.438-.476.473l-3.575-.041h-.008zm18.97-19.501h4.726l.005-.003c6.971 0 10.451 3.16 10.341 9.395-.128 7.306-4.58 12.675-11.284 13.913-.953.175-1.922.244-2.89.239l-3.237-.015a.204.204 0 0 0-.203.198.19.19 0 0 0 .105.173l.394.205 1.019.532 1.024.533.318.165c.226.118.313.314.263.566l-.718 3.237c-.059.27-.276.426-.594.426h-5.907a.58.58 0 0 1-.445-.206.43.43 0 0 1-.09-.37l6.578-28.558c.065-.297.345-.43.595-.43m2.991 16.995h.126c3.103-.126 4.794-3.792 4.856-7.348.036-2.055-.714-3.259-2.059-3.3h-4.32a.2.2 0 0 0-.175.299.2.2 0 0 0 .076.072s2.733 1.441 2.92 1.545c.147.08.15.217.101.454 0 .006-.418 1.844-.859 3.782-.492 2.163-1.01 4.451-1.008 4.455.008.01.058.04.342.04" clip-rule="evenodd"/></svg>
+      ),
+    },
+    Pytorch: {
+    light: (
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#EE4C2C" d="m75.5 31.799-6.6 6.6c10.8 10.8 10.8 28.2 0 38.8-10.8 10.8-28.2 10.8-38.8 0-10.8-10.8-10.8-28.2 0-38.8l17.1-17.1 2.4-2.4v-12.9l-25.8 25.8c-14.4 14.4-14.4 37.6 0 52s37.6 14.4 51.7 0c14.4-14.5 14.4-37.6 0-52"/><path fill="#EE4C2C" d="M62.6 30.198a4.8 4.8 0 1 0 0-9.6 4.8 4.8 0 0 0 0 9.6"/></svg>
+    ),
+     dark: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#fff" d="m75.5 31.799-6.6 6.6c10.8 10.8 10.8 28.2 0 38.8-10.8 10.8-28.2 10.8-38.8 0-10.8-10.8-10.8-28.2 0-38.8l17.1-17.1 2.4-2.4v-12.9l-25.8 25.8c-14.4 14.4-14.4 37.6 0 52s37.6 14.4 51.7 0c14.4-14.5 14.4-37.6 0-52"/><path fill="#fff" d="M62.6 30.198a4.8 4.8 0 1 0 0-9.6 4.8 4.8 0 0 0 0 9.6"/></svg>
+      ),
+    },
+
+     net: {
+    light: (
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#5C2D91" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50"/><path fill="#fff" d="M16.736 13a50 50 0 1 0 70.593 70.593z" opacity=".1"/><path fill="#fff" d="M11.562 58.203A2.1 2.1 0 0 1 10 57.547a2.16 2.16 0 0 1-.64-1.563 2.2 2.2 0 0 1 .64-1.562 2.1 2.1 0 0 1 1.562-.672 2.14 2.14 0 0 1 1.563.672 2.17 2.17 0 0 1 .656 1.562 2.14 2.14 0 0 1-.656 1.563 2.15 2.15 0 0 1-1.563.656m31.048-.39h-4.094l-14.641-22.72a9.4 9.4 0 0 1-.906-1.78h-.125c.139 1.297.191 2.602.156 3.906v20.594h-3.328V29.328H24l14.25 22.313q.892 1.39 1.156 1.906h.078a30 30 0 0 1-.203-4.188V29.33h3.328zm22.53 0H50V29.328h14.438v3.016H53.406v9.468h10.282v3H53.406v9.876h11.75zM87.5 32.344h-8.281v25.469H75.89v-25.47h-8.188v-3.015H87.5z"/><path fill="#F2F2F2" d="M40.813 77.188a7.7 7.7 0 0 1-3.626.765 5.84 5.84 0 0 1-4.484-1.797 6.66 6.66 0 0 1-1.687-4.687 6.97 6.97 0 0 1 1.89-5.094 6.44 6.44 0 0 1 4.813-1.937 7.7 7.7 0 0 1 3.125.546v1.563a6.25 6.25 0 0 0-3.125-.781 4.78 4.78 0 0 0-3.672 1.562 5.7 5.7 0 0 0-1.406 4.031 5.42 5.42 0 0 0 1.312 3.829 4.47 4.47 0 0 0 3.453 1.421 6.47 6.47 0 0 0 3.422-.874zm6.39.765a4.35 4.35 0 0 1-3.328-1.39 4.86 4.86 0 0 1-1.234-3.485 5.06 5.06 0 0 1 1.297-3.687 4.7 4.7 0 0 1 3.484-1.328 4.2 4.2 0 0 1 3.266 1.296 5.13 5.13 0 0 1 1.171 3.579 5.03 5.03 0 0 1-1.265 3.593 4.44 4.44 0 0 1-3.39 1.422m.11-8.547a2.86 2.86 0 0 0-2.282.985 4.05 4.05 0 0 0-.843 2.718 3.83 3.83 0 0 0 .843 2.626 2.89 2.89 0 0 0 2.282.968 2.75 2.75 0 0 0 2.234-.937 4.1 4.1 0 0 0 .781-2.688 4.16 4.16 0 0 0-.781-2.703 2.74 2.74 0 0 0-2.234-.969m11.842.469a1.84 1.84 0 0 0-1.14-.297 1.92 1.92 0 0 0-1.563.906 4.2 4.2 0 0 0-.64 2.47v4.78H54.25V68.36h1.563v1.954a3.3 3.3 0 0 1 .984-1.563c.407-.354.93-.548 1.469-.547.302-.013.604.029.89.125zm9.157 3.562h-6.61a3.5 3.5 0 0 0 .797 2.407 2.9 2.9 0 0 0 2.219.843 4.7 4.7 0 0 0 2.906-1.046v1.406a5.44 5.44 0 0 1-3.266.89 3.97 3.97 0 0 1-3.125-1.28 5.23 5.23 0 0 1-1.14-3.595 5.13 5.13 0 0 1 1.234-3.562 3.99 3.99 0 0 1 3.125-1.375 3.53 3.53 0 0 1 2.844 1.187 4.97 4.97 0 0 1 1 3.313zm-1.563-1.265a3.12 3.12 0 0 0-.625-2.016 2.14 2.14 0 0 0-1.719-.719 2.42 2.42 0 0 0-1.797.766 3.45 3.45 0 0 0-.922 1.984z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+    ),
+     dark: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#5C2D91" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50"/><path fill="#fff" d="M16.736 12.685A50 50 0 1 0 87.329 83.28z" opacity=".1"/><path fill="#fff" d="M11.562 58.204A2.1 2.1 0 0 1 10 57.548a2.16 2.16 0 0 1-.64-1.563 2.2 2.2 0 0 1 .64-1.563 2.1 2.1 0 0 1 1.562-.672 2.14 2.14 0 0 1 1.563.672 2.17 2.17 0 0 1 .656 1.563 2.14 2.14 0 0 1-.656 1.563 2.16 2.16 0 0 1-1.563.656m31.048-.39h-4.094l-14.641-22.72a9.4 9.4 0 0 1-.906-1.781h-.125A29 29 0 0 1 23 37.219v20.595h-3.328V29.328H24l14.25 22.314q.892 1.39 1.156 1.906h.078a30 30 0 0 1-.203-4.188V29.328h3.328zm22.53 0H50V29.328h14.438v3.016H53.406v9.47h10.282v3H53.406v9.875h11.75zm22.36-25.47h-8.281v25.47H75.89v-25.47h-8.188v-3.016H87.5z"/><path fill="#F2F2F2" d="M40.813 77.188a7.7 7.7 0 0 1-3.626.766 5.84 5.84 0 0 1-4.484-1.797 6.66 6.66 0 0 1-1.687-4.688 6.97 6.97 0 0 1 1.89-5.094 6.44 6.44 0 0 1 4.813-1.937 7.7 7.7 0 0 1 3.125.546v1.563a6.25 6.25 0 0 0-3.125-.781 4.78 4.78 0 0 0-3.672 1.562 5.7 5.7 0 0 0-1.406 4.032 5.42 5.42 0 0 0 1.312 3.828 4.47 4.47 0 0 0 3.453 1.422 6.47 6.47 0 0 0 3.422-.875zm6.39.766a4.34 4.34 0 0 1-3.328-1.391 4.86 4.86 0 0 1-1.234-3.484 5.06 5.06 0 0 1 1.297-3.688 4.7 4.7 0 0 1 3.484-1.328 4.2 4.2 0 0 1 3.266 1.296 5.13 5.13 0 0 1 1.171 3.579 5.03 5.03 0 0 1-1.265 3.594 4.44 4.44 0 0 1-3.39 1.422m.11-8.548a2.86 2.86 0 0 0-2.282.985 4.05 4.05 0 0 0-.843 2.719c-.055.95.246 1.885.843 2.625a2.89 2.89 0 0 0 2.282.969 2.75 2.75 0 0 0 2.234-.938 4.1 4.1 0 0 0 .781-2.687 4.16 4.16 0 0 0-.781-2.704 2.74 2.74 0 0 0-2.234-.969m11.842.469a1.84 1.84 0 0 0-1.14-.297 1.92 1.92 0 0 0-1.563.906 4.2 4.2 0 0 0-.64 2.47v4.78H54.25V68.36h1.563v1.954a3.3 3.3 0 0 1 .984-1.563c.407-.354.93-.548 1.469-.547.302-.013.604.029.89.125zm9.157 3.563h-6.61a3.5 3.5 0 0 0 .797 2.406 2.9 2.9 0 0 0 2.219.844 4.7 4.7 0 0 0 2.906-1.047v1.406a5.44 5.44 0 0 1-3.266.89 3.97 3.97 0 0 1-3.125-1.28 5.23 5.23 0 0 1-1.14-3.594 5.13 5.13 0 0 1 1.234-3.563 3.98 3.98 0 0 1 3.125-1.375 3.53 3.53 0 0 1 2.844 1.188 4.97 4.97 0 0 1 1 3.312zm-1.563-1.266a3.13 3.13 0 0 0-.625-2.016 2.14 2.14 0 0 0-1.719-.719 2.42 2.42 0 0 0-1.797.766 3.45 3.45 0 0 0-.922 1.985z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+      ),
+    },
 };
 
+// Order: most important/common, then by similarity (frontend, backend, data, infra, etc.)
 const techStack = [
-  { name: "Astro", customSVG: SVGs.Astro },
-  { name: "React", icon: "https://techstack-generator.vercel.app/react-icon.svg" },
-  { name: "Python", icon: "https://techstack-generator.vercel.app/python-icon.svg" },
-  { name: "C++", icon: "https://techstack-generator.vercel.app/cpp-icon.svg" },
-  { name: "C", icon: "/C.svg" },
-  { name: "C#", icon: "https://techstack-generator.vercel.app/csharp-icon.svg" },
-  { name: ".NET", icon: "/microsoft-net.svg" },
-  { name: "Java", icon: "https://techstack-generator.vercel.app/java-icon.svg" },
-  { name: "JavaScript", icon: "https://techstack-generator.vercel.app/js-icon.svg" },
-  { name: "TypeScript", icon: "https://techstack-generator.vercel.app/ts-icon.svg" },
+  // **Frontend Web**
+  { name: "Astro", customSVG: SVGs.Astro },           // Framework
+  { name: "React", icon: "https://techstack-generator.vercel.app/react-icon.svg" },   // Framework
   { name: "HTML5", customSVG: SVGs.HTML5 },
   { name: "CSS3", customSVG: SVGs.CSS3 },
-  { name: "Cloudinary", customSVG: SVGs.Cloudinary },
+  { name: "JavaScript", icon: "https://techstack-generator.vercel.app/js-icon.svg" },
+  { name: "TypeScript", icon: "https://techstack-generator.vercel.app/ts-icon.svg" },
   { name: "Tailwind", customSVG: SVGs.Tailwind },
   { name: "Bootstrap", customSVG: SVGs.Bootstrap },
   { name: "jQuery", customSVG: SVGs.jQuery },
-  { name: "MATLAB", icon: "/matlab.svg" },
-  { name: "MySQL", icon: "https://techstack-generator.vercel.app/mysql-icon.svg" },
+  // **Backend & APIs**
   { name: "Node.js", customSVG: SVGs.Nodejs },
-  { name: "Scala", customSVG: SVGs.Scala },
   { name: "REST API", icon: "https://techstack-generator.vercel.app/restapi-icon.svg" },
-  { name: "Storybook", icon: "https://techstack-generator.vercel.app/storybook-icon.svg" },
-  { name: "GitHub", icon: "https://techstack-generator.vercel.app/github-icon.svg" },
-  { name: "PowerBI", icon: "https://www.tech-stack-icons.com/icons/powerbi.svg" },
+  { name: ".NET", customSVG: SVGs.net },
+  { name: "Java", icon: "https://techstack-generator.vercel.app/java-icon.svg" },
+  { name: "Scala", customSVG: SVGs.Scala },
+  // **Programming Languages**
+  { name: "Python", icon: "https://techstack-generator.vercel.app/python-icon.svg" },
+  { name: "Pytorch", customSVG: SVGs.Pytorch },
+  { name: "Tensorflow", icon: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" },
+  { name: "C++", icon: "https://techstack-generator.vercel.app/cpp-icon.svg" },
+  { name: "C", icon: "/C.svg" },
+  { name: "C#", icon: "https://techstack-generator.vercel.app/csharp-icon.svg" },
+  { name: "MATLAB", icon: "/matlab.svg" },
+  { name: "PHP", icon: "https://www.vectorlogo.zone/logos/php/php-icon.svg" },
+  // **Data/Infra**
+  { name: "MySQL", icon: "https://techstack-generator.vercel.app/mysql-icon.svg" },
   { name: "AWS", icon: "https://techstack-generator.vercel.app/aws-icon.svg" },
   { name: "Airtable", customSVG: SVGs.Airtable },
+  { name: "Cloudinary", customSVG: SVGs.Cloudinary },
+   { name: "phpMyAdmin", icon: "https://www.vectorlogo.zone/logos/phpmyadmin/phpmyadmin-ar21.svg" },
+  // **Dev Tools**
+  { name: "Git", customSVG: SVGs.Git },
+  { name: "GitHub", icon: "https://techstack-generator.vercel.app/github-icon.svg" },
+  { name: "PowerBI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
+  // **Other/Visualization/Animation**
+  { name: "Three.js", customSVG: SVGs.Three },
+  { name: "GSAP", customSVG: SVGs.GSAP },
 ];
 
 export default function TechStack() {
   const { theme } = useDarkMode();
 
   function getTechIcon(item: any) {
-    // Use system theme detection for 'system'
     let colorScheme = theme;
     if (theme === "system" && typeof window !== "undefined") {
       colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
-
     if (item.customSVG) {
       return colorScheme === "dark" ? item.customSVG.dark : item.customSVG.light;
     }
     if (item.icon) {
-      return <img src={item.icon} alt={item.name} className="w-16 h-16" />;
+      // Largest size for phpMyAdmin only
+      const isPhpMyAdmin = item.name === "phpMyAdmin";
+      return (
+        <img
+          src={item.icon}
+          alt={item.name}
+          className={
+            isPhpMyAdmin
+              ? "w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain mx-auto"
+              : "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain mx-auto"
+          }
+          loading="lazy"
+          style={
+            isPhpMyAdmin
+              ? { maxWidth: "224px", maxHeight: "224px", minWidth: "88px", minHeight: "88px" }
+              : { maxWidth: "80px", maxHeight: "80px", minWidth: "48px", minHeight: "48px" }
+          }
+        />
+      );
     }
     return null;
   }
 
+  // To center the last row (Three.js and GSAP)
+  const lastRowNames = ["Three.js", "GSAP"];
+  const lastRowItems = techStack.filter(t => lastRowNames.includes(t.name));
+  const otherItems = techStack.filter(t => !lastRowNames.includes(t.name));
+
   return (
-    <section className="mt-16">
-      <h2 className="text-xl font-bold text-text-primary mb-4">Tech Stack</h2>
-      <div className="flex flex-wrap gap-6">
-        {techStack.map(t => (
-          <div key={t.name} className="flex flex-col items-center justify-center gap-2 bg-surface border border-muted rounded-xl px-4 py-2 shadow-sm">
-            {getTechIcon(t)}
-            <span className="text-xs text-text-secondary">{t.name}</span>
+    <section className="mt-16 px-2 sm:px-4 md:px-8">
+      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary mb-6 md:mb-8 text-center tracking-tight">
+        Tech Stack
+      </h2>
+      <div
+        className="
+          grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6
+          gap-4 sm:gap-6 md:gap-8 justify-center
+        "
+      >
+        {otherItems.map(t => (
+          <div
+            key={t.name}
+            className="
+              flex flex-col items-center justify-center gap-2
+              bg-surface border border-muted rounded-xl
+              shadow-sm hover:scale-105 transition-transform hover:shadow-lg
+              min-w-[88px] min-h-[110px] sm:min-w-[100px] sm:min-h-[120px]
+              md:min-w-[120px] md:min-h-[140px] px-3 py-3 md:px-5 md:py-5
+            "
+          >
+            <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+              {getTechIcon(t)}
+            </div>
+            <span className="text-xs md:text-sm lg:text-base text-text-secondary text-center font-medium">{t.name}</span>
+          </div>
+        ))}
+      </div>
+      {/* Center last row (Three.js & GSAP) */}
+      <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mt-4">
+        {lastRowItems.map(t => (
+          <div
+            key={t.name}
+            className="
+              flex flex-col items-center justify-center gap-2
+              bg-surface border border-muted rounded-xl
+              shadow-sm hover:scale-105 transition-transform hover:shadow-lg
+              min-w-[88px] min-h-[110px] sm:min-w-[100px] sm:min-h-[120px]
+              md:min-w-[120px] md:min-h-[140px] px-3 py-3 md:px-5 md:py-5
+            "
+          >
+            <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+              {getTechIcon(t)}
+            </div>
+            <span className="text-xs md:text-sm lg:text-base text-text-secondary text-center font-medium">{t.name}</span>
           </div>
         ))}
       </div>
