@@ -1,0 +1,52 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import TechStack from '../components/TechStack';
+---
+
+<MainLayout>
+  <div class="pt-16 md:pt-24"></div>
+  
+  {/* About Page Header */}
+  <section class="px-4 sm:px-6 md:px-8 mb-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4">About Me</h1>
+      <p class="text-lg md:text-xl text-text-secondary leading-relaxed">
+        Passionate developer with expertise in full-stack development, machine learning, and cloud technologies.
+      </p>
+    </div>
+  </section>
+
+  {/* Full Tech Stack */}
+  <TechStack client:load />
+
+  {/* Additional About Content */}
+  <section class="mt-16 px-4 sm:px-6 md:px-8 mb-16">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-surface border border-muted rounded-2xl p-8 shadow">
+        <h2 class="text-2xl font-bold text-text-primary mb-4">Background</h2>
+        <p class="text-text-secondary leading-relaxed mb-4">
+          I'm a developer who loves building things that make a difference. My journey in tech has taken me through various domains including web development, data science, and cloud computing.
+        </p>
+        <p class="text-text-secondary leading-relaxed mb-4">
+          Outside of code, I enjoy gaming and football, and I am always exploring new technologies. I'm particularly interested in machine learning, data science, cloud deployments, and UI design.
+        </p>
+        <p class="text-text-secondary leading-relaxed font-medium text-text-primary">
+          I want my work to be genuinely useful and enjoyable for others.
+        </p>
+      </div>
+
+      {/* Contact CTA */}
+      <div class="mt-10 bg-surface border border-muted rounded-2xl p-8 text-center shadow">
+        <h3 class="text-2xl font-bold text-text-primary">Let's work together</h3>
+        <p class="text-text-secondary mt-2 text-base">
+          If you would like to collaborate or have a role to discuss, let's connect!
+        </p>
+        <div class="mt-5">
+          <a href="/contact" class="btn inline-block text-base font-semibold px-7 py-3">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

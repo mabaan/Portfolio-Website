@@ -2,7 +2,7 @@ import React from "react";
 
 const featuredProjects = [
   {
-    title: "Official Company Website",
+    title: "Official Company Website for SME",
     desc: "SEO-optimized public website for GC International, built with Astro, React, Airtable CMS, and Three.js for interactive 3D animations. Content managed via Airtable and deployed to Vercel.",
     href: "https://github.com/mabaan/Company-Website",
     img: "/company website.webp",

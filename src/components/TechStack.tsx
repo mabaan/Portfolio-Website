@@ -172,7 +172,12 @@ const techStack = [
   { name: "GSAP", customSVG: SVGs.GSAP },
 ];
 
-export default function TechStack() {
+interface TechStackProps {
+  limit?: number;
+  showViewMoreButton?: boolean;
+}
+
+export default function TechStack({ limit, showViewMoreButton = false }: TechStackProps = {}) {
   const { theme } = useDarkMode();
 
   function getTechIcon(item: any) {
@@ -207,10 +212,14 @@ export default function TechStack() {
     return null;
   }
 
-  // To center the last row (Three.js and GSAP)
+  // Apply limit if specified
+  const displayedStack = limit ? techStack.slice(0, limit) : techStack;
+  
+  // To center the last row (Three.js and GSAP) - only if showing all
   const lastRowNames = ["Three.js", "GSAP"];
-  const lastRowItems = techStack.filter(t => lastRowNames.includes(t.name));
-  const otherItems = techStack.filter(t => !lastRowNames.includes(t.name));
+  const shouldCenterLastRow = !limit;
+  const lastRowItems = shouldCenterLastRow ? displayedStack.filter(t => lastRowNames.includes(t.name)) : [];
+  const otherItems = shouldCenterLastRow ? displayedStack.filter(t => !lastRowNames.includes(t.name)) : displayedStack;
 
   return (
     <section className="mt-16 px-2 sm:px-4 md:px-8">
@@ -241,26 +250,40 @@ export default function TechStack() {
           </div>
         ))}
       </div>
-      {/* Center last row (Three.js & GSAP) */}
-      <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mt-4">
-        {lastRowItems.map(t => (
-          <div
-            key={t.name}
-            className="
-              flex flex-col items-center justify-center gap-2
-              bg-surface border border-muted rounded-xl
-              shadow-sm hover:scale-105 transition-transform hover:shadow-lg
-              min-w-[88px] min-h-[110px] sm:min-w-[100px] sm:min-h-[120px]
-              md:min-w-[120px] md:min-h-[140px] px-3 py-3 md:px-5 md:py-5
-            "
-          >
-            <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
-              {getTechIcon(t)}
+      {/* Center last row (Three.js & GSAP) - only when showing all */}
+      {shouldCenterLastRow && lastRowItems.length > 0 && (
+        <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mt-4">
+          {lastRowItems.map(t => (
+            <div
+              key={t.name}
+              className="
+                flex flex-col items-center justify-center gap-2
+                bg-surface border border-muted rounded-xl
+                shadow-sm hover:scale-105 transition-transform hover:shadow-lg
+                min-w-[88px] min-h-[110px] sm:min-w-[100px] sm:min-h-[120px]
+                md:min-w-[120px] md:min-h-[140px] px-3 py-3 md:px-5 md:py-5
+              "
+            >
+              <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+                {getTechIcon(t)}
+              </div>
+              <span className="text-xs md:text-sm lg:text-base text-text-secondary text-center font-medium">{t.name}</span>
             </div>
-            <span className="text-xs md:text-sm lg:text-base text-text-secondary text-center font-medium">{t.name}</span>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+      
+      {/* View More Button */}
+      {showViewMoreButton && (
+        <div className="flex justify-center mt-8">
+          <a
+            href="/about"
+            className="btn inline-block text-base font-semibold px-8 py-3 transition-all hover:scale-105"
+          >
+            View More
+          </a>
+        </div>
+      )}
     </section>
   );
 }
