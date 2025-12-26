@@ -1,0 +1,38 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import FeaturedProjects from '../components/FeaturedProjects';
+---
+
+<MainLayout>
+  <div class="pt-16 md:pt-24"></div>
+  
+  {/* Projects Page Header */}
+  <section class="px-4 sm:px-6 md:px-8 mb-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4">Projects</h1>
+      <p class="text-lg md:text-xl text-text-secondary leading-relaxed">
+        A collection of projects showcasing my work in web development, machine learning, and more.
+      </p>
+    </div>
+  </section>
+
+  {/* All Projects */}
+  <FeaturedProjects client:load showAll={true} showViewMoreButton={false} />
+
+  {/* Contact CTA */}
+  <section class="mt-16 px-4 sm:px-6 md:px-8 mb-16">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-surface border border-muted rounded-2xl p-8 text-center shadow">
+        <h3 class="text-2xl font-bold text-text-primary">Have a project in mind?</h3>
+        <p class="text-text-secondary mt-2 text-base">
+          I'm always open to discussing new projects and opportunities.
+        </p>
+        <div class="mt-5">
+          <a href="/contact" class="btn inline-block text-base font-semibold px-7 py-3">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

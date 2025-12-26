@@ -130,44 +130,45 @@ const SVGs = {
     },
 };
 
-// Order: most important/common, then by similarity (frontend, backend, data, infra, etc.)
+// Order: First 6 show on homepage - AI Engineer w/ Full Stack focus
 const techStack = [
-  // **Frontend Web**
-  { name: "Astro", customSVG: SVGs.Astro },           // Framework
-  { name: "React", icon: "https://techstack-generator.vercel.app/react-icon.svg" },   // Framework
-  { name: "HTML5", customSVG: SVGs.HTML5 },
-  { name: "CSS3", customSVG: SVGs.CSS3 },
-  { name: "JavaScript", icon: "https://techstack-generator.vercel.app/js-icon.svg" },
-  { name: "TypeScript", icon: "https://techstack-generator.vercel.app/ts-icon.svg" },
-  { name: "Tailwind", customSVG: SVGs.Tailwind },
-  { name: "Bootstrap", customSVG: SVGs.Bootstrap },
-  { name: "jQuery", customSVG: SVGs.jQuery },
-  // **Backend & APIs**
-  { name: "Node.js", customSVG: SVGs.Nodejs },
-  { name: "REST API", icon: "https://techstack-generator.vercel.app/restapi-icon.svg" },
-  { name: ".NET", customSVG: SVGs.net },
-  { name: "Java", icon: "https://techstack-generator.vercel.app/java-icon.svg" },
-  { name: "Scala", customSVG: SVGs.Scala },
-  // **Programming Languages**
+  // **Featured on Homepage (First 6)**
   { name: "Python", icon: "https://techstack-generator.vercel.app/python-icon.svg" },
   { name: "Pytorch", customSVG: SVGs.Pytorch },
   { name: "Tensorflow", icon: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" },
+  { name: "React", icon: "https://techstack-generator.vercel.app/react-icon.svg" },
+  { name: "TypeScript", icon: "https://techstack-generator.vercel.app/ts-icon.svg" },
+  { name: "Node.js", customSVG: SVGs.Nodejs },
+  // **AI/ML & Data**
+  { name: "AWS", icon: "https://techstack-generator.vercel.app/aws-icon.svg" },
+  { name: "MySQL", icon: "https://techstack-generator.vercel.app/mysql-icon.svg" },
+  // **Full Stack Web**
+  { name: "JavaScript", icon: "https://techstack-generator.vercel.app/js-icon.svg" },
+  { name: "Astro", customSVG: SVGs.Astro },
+  { name: "Tailwind", customSVG: SVGs.Tailwind },
+  { name: "REST API", icon: "https://techstack-generator.vercel.app/restapi-icon.svg" },
+  { name: "HTML5", customSVG: SVGs.HTML5 },
+  { name: "CSS3", customSVG: SVGs.CSS3 },
+  { name: "Bootstrap", customSVG: SVGs.Bootstrap },
+  { name: "jQuery", customSVG: SVGs.jQuery },
+  // **Backend & Languages**
+  { name: ".NET", customSVG: SVGs.net },
+  { name: "Java", icon: "https://techstack-generator.vercel.app/java-icon.svg" },
+  { name: "Scala", customSVG: SVGs.Scala },
   { name: "C++", icon: "https://techstack-generator.vercel.app/cpp-icon.svg" },
   { name: "C", icon: "/C.svg" },
   { name: "C#", icon: "https://techstack-generator.vercel.app/csharp-icon.svg" },
   { name: "MATLAB", icon: "/matlab.svg" },
   { name: "PHP", icon: "https://www.vectorlogo.zone/logos/php/php-icon.svg" },
   // **Data/Infra**
-  { name: "MySQL", icon: "https://techstack-generator.vercel.app/mysql-icon.svg" },
-  { name: "AWS", icon: "https://techstack-generator.vercel.app/aws-icon.svg" },
   { name: "Airtable", customSVG: SVGs.Airtable },
   { name: "Cloudinary", customSVG: SVGs.Cloudinary },
-   { name: "phpMyAdmin", icon: "https://www.vectorlogo.zone/logos/phpmyadmin/phpmyadmin-ar21.svg" },
+  { name: "phpMyAdmin", icon: "https://www.vectorlogo.zone/logos/phpmyadmin/phpmyadmin-ar21.svg" },
   // **Dev Tools**
   { name: "Git", customSVG: SVGs.Git },
   { name: "GitHub", icon: "https://techstack-generator.vercel.app/github-icon.svg" },
   { name: "PowerBI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
-  // **Other/Visualization/Animation**
+  // **Visualization/Animation**
   { name: "Three.js", customSVG: SVGs.Three },
   { name: "GSAP", customSVG: SVGs.GSAP },
 ];

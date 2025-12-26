@@ -1,37 +1,120 @@
 import React from "react";
 
-const featuredProjects = [
+const allProjects = [
+  // === FEATURED PROJECTS (Top 3 - Production/High Impact) ===
   {
     title: "Official Company Website for SME",
     desc: "SEO-optimized public website for GC International, built with Astro, React, Airtable CMS, and Three.js for interactive 3D animations. Content managed via Airtable and deployed to Vercel.",
     href: "https://github.com/mabaan/Company-Website",
     img: "/company website.webp",
-    tech: ["Astro", "React", "Three.js", "Airtable", "AWS", "CMS", "Vercel"]
+    tech: ["Astro", "React", "Three.js", "Airtable", "AWS", "CMS", "Vercel"],
+    featured: true
   },
   {
-    title: "Malware Classification using CNNs",
-    desc: "Built a malware detection system using deep learning on byte-sized image inputs from a public dataset. Explored and augmented data, implemented both a modified ResNet-18 and a custom CNN in PyTorch, and achieved high accuracy.",
-    href: "https://github.com/mabaan/Malware-Classification-using-CNNs",
-    img: "/malware.webp",
-    tech: ["Python", "PyTorch", "CNN", "EDA", "Data Augmentation"]
+    title: "Carway: Vehicle Auction Platform",
+    desc: "Full-stack vehicle auction aggregator processing 50K+ daily lots from Copart, IAAI, Emirates Auction and more. Features VIN search, bid history tracking, advanced filtering, and secure payment gateway integration.",
+    href: "https://carway.pro",
+    img: "/placeholder.webp", // TODO: Add Carway screenshot
+    tech: ["PHP", "MySQL", "Payment Gateway", "SEO", "REST APIs"],
+    featured: false
+  },
+  {
+    title: "KHAYAL: EEG Imagined Speech Classification",
+    desc: "Brain-computer interface system for classifying imagined Arabic speech from EEG data. Two-stage pipeline using transformer neural networks for word classification and JAIS-13B LLM for sentence reconstruction.",
+    href: "https://github.com/mabaan/Imagined-Speech-EEG-Classification",
+    img: "/khayal.jpg", // TODO: Add EEG project screenshot
+    tech: ["Python", "PyTorch", "Transformers", "EEG", "LLM", "BCI"],
+    featured: true
+  },
+
+  // === PRODUCTION & FULL-STACK PROJECTS ===
+  {
+    title: "FishNet - Phishing Detection Extension",
+    desc: "Multi-stage phishing detection browser extension with real-time URL analysis and ML classification. Features USI algorithm with FAISS similarity search and Logistic Regression classifier achieving 99.66% accuracy.",
+    href: "https://github.com/mabaan/FishNet",
+    img: "/fishnet.png",
+    tech: ["Python", "Flask", "scikit-learn", "FAISS", "JavaScript", "Chrome Extension"],
+    featured: false
   },
   {
     title: "Anime Recommendation Model",
     desc: "A full-stack anime recommender system representing a multi-stage hybrid recommendation engine that adapts to each user by combining non-personalized popularity, content-based filtering, and collaborative filtering.",
     href: "https://github.com/mabaan/Anime-Recommendation-Model",
     img: "/anime rec.png",
-    tech: ["Python", "Flask", "scikit-learn", "React", "APIs"]
+    tech: ["Python", "Flask", "scikit-learn", "React", "APIs"],
+    featured: true
+  },
+  {
+    title: "SmartMealz - BMI Meal Planner",
+    desc: "Dynamic BMI-driven meal planning platform with personalized recommendations. Features caloric needs calculation, meal categorization (high-protein, balanced, plant-based), and responsive UI.",
+    href: "https://github.com/mabaan/Smart-Mealz",
+    img: "/smart mealz.png",
+    tech: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap"],
+    featured: false
+  },
+
+  // === ML & DEEP LEARNING PROJECTS ===
+  {
+    title: "Malware Classification using CNNs",
+    desc: "Deep learning-based malware detection system using Convolutional Neural Networks. Implements ResNet18 and custom 3-layer CNN architectures with data augmentation for classifying malware samples from binary images.",
+    href: "https://github.com/mabaan/Malware-Classification-using-CNNs",
+    img: "/malware.webp",
+    tech: ["Python", "PyTorch", "CNN", "ResNet", "Deep Learning"],
+    featured: false
+  },
+  {
+    title: "PV Fault Detection System",
+    desc: "ML-based fault detection for grid-connected photovoltaic systems. Analyzes electrical and environmental parameters using Decision Trees, k-NN, SVM, and Neural Networks achieving 99.84% accuracy.",
+    href: "https://github.com/mabaan/Fault-Detection-in-grid-tie-Photovoltaic-Plant-Operation",
+    img: "/placeholder.webp", // TODO: Add PV Fault Detection screenshot
+    tech: ["Python", "scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+    featured: false
+  },
+  {
+    title: "Heart Disease Prediction",
+    desc: "Machine learning model for predicting heart diseases in high-risk patients. Uses patient health metrics and clinical data to identify individuals at elevated cardiovascular risk.",
+    href: "https://github.com/mabaan/Predicting-Heart-Diseases-in-High-Risk-Patients",
+    img: "/placeholder.webp", // TODO: Add Heart Disease project screenshot
+    tech: ["Python", "scikit-learn", "Pandas", "Data Analysis"],
+    featured: false
+  },
+
+  // === SECURITY & SYSTEMS PROJECTS ===
+  {
+    title: "Social Engineering Attack Demo",
+    desc: "Educational demonstrations of social engineering attacks including GUI confusion phishing and privacy dark patterns. Features fullscreen fake login pages and predatory privacy settings UI studies.",
+    href: "https://github.com/mabaan/Social-Engineering-Attack",
+    img: "/placeholder.webp", // TODO: Add Social Engineering screenshot
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Security Research"],
+    featured: false
+  },
+  {
+    title: "Multithreaded Producer-Consumer",
+    desc: "C implementation of producer-consumer pattern using POSIX pthreads and semaphores. Features circular bounded buffer, poison pill termination, priority queues, and latency/throughput metrics.",
+    href: "https://github.com/mabaan/Multithreaded-Producer-Consumer-Application",
+    img: "/placeholder.webp", // TODO: Add Producer-Consumer diagram
+    tech: ["C", "POSIX", "Pthreads", "Semaphores", "OS Concepts"],
+    featured: false
   }
 ];
 
-export default function FeaturedProjects() {
+interface FeaturedProjectsProps {
+  showAll?: boolean;
+  showViewMoreButton?: boolean;
+}
+
+export default function FeaturedProjects({ showAll = false, showViewMoreButton = true }: FeaturedProjectsProps) {
+  const projects = showAll ? allProjects : allProjects.filter(p => p.featured);
+  
   return (
     <section id="projects" className="mt-16 px-2 sm:px-6">
-      <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-10 text-center tracking-tight">
-        Featured Projects
-      </h2>
+      {!showAll && (
+        <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-10 text-center tracking-tight">
+          Featured Projects
+        </h2>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8 xl:gap-10">
-        {featuredProjects.map(p => (
+        {projects.map(p => (
           <article
             key={p.title}
             className="
@@ -149,6 +232,18 @@ export default function FeaturedProjects() {
           </article>
         ))}
       </div>
+      
+      {/* View More Button */}
+      {showViewMoreButton && !showAll && (
+        <div className="flex justify-center mt-8">
+          <a
+            href="/projects"
+            className="btn inline-block text-base font-semibold px-8 py-3 transition-all hover:scale-105"
+          >
+            View More
+          </a>
+        </div>
+      )}
     </section>
   );
 }
