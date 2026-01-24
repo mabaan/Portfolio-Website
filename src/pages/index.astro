@@ -4,6 +4,7 @@ import TechStack from '../components/TechStack';
 import FeaturedProjects from '../components/FeaturedProjects';
 import Hero from '../components/Hero';
 import AboutMeAndCTA from '../components/AboutMeAndCTA';
+import Certifications from '../components/Certifications';
 ---
 
 <MainLayout>
@@ -11,6 +12,11 @@ import AboutMeAndCTA from '../components/AboutMeAndCTA';
   <Hero client:load />
 
   <TechStack client:load limit={6} showViewMoreButton={true} />
+  <section class="px-2 sm:px-4 md:px-6 lg:px-8 mt-12">
+    <div class="max-w-6xl mx-auto">
+      <Certifications client:load />
+    </div>
+  </section>
   <FeaturedProjects client:load />
 
   <AboutMeAndCTA client:load />
