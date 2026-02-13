@@ -8,6 +8,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/vercel": "^9.0.4",
     "@react-three/drei": "^10.7.2",
     "@react-three/fiber": "^9.3.0",
     "@types/react": "^19.1.10",
