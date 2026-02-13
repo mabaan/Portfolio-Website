@@ -2,20 +2,6 @@ import type { APIRoute } from "astro";
 
 export const prerender = false;
 
-const AIRTABLE_API_KEY = (
-  import.meta.env.AIRTABLE_API_KEY ||
-  import.meta.env.AIRTABLE_TOKEN ||
-  ""
-).trim();
-const AIRTABLE_BASE_ID = (import.meta.env.AIRTABLE_BASE_ID || "").trim();
-const AIRTABLE_TABLE_NAME = (import.meta.env.AIRTABLE_TABLE_NAME || "").trim();
-
-const FIELD_FULL_NAME = import.meta.env.AIRTABLE_FIELD_FULL_NAME || "Full Name";
-const FIELD_EMAIL = import.meta.env.AIRTABLE_FIELD_EMAIL || "Email";
-const FIELD_COMPANY = import.meta.env.AIRTABLE_FIELD_COMPANY || "Company";
-const FIELD_REASON = import.meta.env.AIRTABLE_FIELD_REASON || "Reason";
-const FIELD_MESSAGE = import.meta.env.AIRTABLE_FIELD_MESSAGE || "Message";
-
 type ContactPayload = {
   fullName: string;
   email: string;
@@ -51,6 +37,21 @@ async function safeParseJSON(response: Response) {
 }
 
 export const POST: APIRoute = async ({ request }) => {
+  // Read secrets at request time from runtime environment (never baked into build output).
+  const AIRTABLE_API_KEY = (
+    process.env.AIRTABLE_API_KEY ||
+    process.env.AIRTABLE_TOKEN ||
+    ""
+  ).trim();
+  const AIRTABLE_BASE_ID = (process.env.AIRTABLE_BASE_ID || "").trim();
+  const AIRTABLE_TABLE_NAME = (process.env.AIRTABLE_TABLE_NAME || "").trim();
+
+  const FIELD_FULL_NAME = process.env.AIRTABLE_FIELD_FULL_NAME || "Full Name";
+  const FIELD_EMAIL = process.env.AIRTABLE_FIELD_EMAIL || "Email";
+  const FIELD_COMPANY = process.env.AIRTABLE_FIELD_COMPANY || "Company";
+  const FIELD_REASON = process.env.AIRTABLE_FIELD_REASON || "Reason";
+  const FIELD_MESSAGE = process.env.AIRTABLE_FIELD_MESSAGE || "Message";
+
   let payload: ContactPayload;
 
   try {
