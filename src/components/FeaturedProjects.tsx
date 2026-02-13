@@ -14,7 +14,7 @@ const allProjects = [
     title: "Carway: Vehicle Auction Platform",
     desc: "Full-stack vehicle auction aggregator processing 50K+ daily lots from Copart, IAAI, Emirates Auction and more. Features VIN search, bid history tracking, advanced filtering, and secure payment gateway integration.",
     href: "https://carway.pro",
-    img: "/placeholder.webp", // TODO: Add Carway screenshot
+    img: "/carway.webp", // TODO: Add Carway screenshot
     tech: ["PHP", "MySQL", "Payment Gateway", "SEO", "REST APIs"],
     featured: false
   },
@@ -48,7 +48,7 @@ const allProjects = [
     title: "SmartMealz - BMI Meal Planner",
     desc: "Dynamic BMI-driven meal planning platform with personalized recommendations. Features caloric needs calculation, meal categorization (high-protein, balanced, plant-based), and responsive UI.",
     href: "https://github.com/mabaan/Smart-Mealz",
-    img: "/smart mealz.png",
+    img: "/smart mealz.jpg",
     tech: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap"],
     featured: false
   },
@@ -66,7 +66,7 @@ const allProjects = [
     title: "PV Fault Detection System",
     desc: "ML-based fault detection for grid-connected photovoltaic systems. Analyzes electrical and environmental parameters using Decision Trees, k-NN, SVM, and Neural Networks achieving 99.84% accuracy.",
     href: "https://github.com/mabaan/Fault-Detection-in-grid-tie-Photovoltaic-Plant-Operation",
-    img: "/placeholder.webp", // TODO: Add PV Fault Detection screenshot
+    img: "/pv.jpg", // TODO: Add PV Fault Detection screenshot
     tech: ["Python", "scikit-learn", "Pandas", "NumPy", "Matplotlib"],
     featured: false
   },
@@ -74,28 +74,54 @@ const allProjects = [
     title: "Heart Disease Prediction",
     desc: "Machine learning model for predicting heart diseases in high-risk patients. Uses patient health metrics and clinical data to identify individuals at elevated cardiovascular risk.",
     href: "https://github.com/mabaan/Predicting-Heart-Diseases-in-High-Risk-Patients",
-    img: "/placeholder.webp", // TODO: Add Heart Disease project screenshot
+    img: "/heart.jpg", // TODO: Add Heart Disease project screenshot
     tech: ["Python", "scikit-learn", "Pandas", "Data Analysis"],
     featured: false
   },
 
   // === SECURITY & SYSTEMS PROJECTS ===
   {
-    title: "Social Engineering Attack Demo",
-    desc: "Educational demonstrations of social engineering attacks including GUI confusion phishing and privacy dark patterns. Features fullscreen fake login pages and predatory privacy settings UI studies.",
-    href: "https://github.com/mabaan/Social-Engineering-Attack",
-    img: "/placeholder.webp", // TODO: Add Social Engineering screenshot
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Security Research"],
+    title: "ReversePrompt - AI Customer Support Agent",
+    desc: "Multi-agent AI system that detects customer issues across internal channels and social media, routes incidents to teams, and generates reverse prompts guiding employees on next steps. Read-only pipeline with RAG and guardrails.",
+    href: "https://github.com/mabaan/RPM",
+    img: "/rp.jpg", 
+    tech: ["Python", "FastAPI", "RAG", "FAISS", "Qwen LLM", "Multi-Agent", "Docker"],
     featured: false
   },
   {
-    title: "Multithreaded Producer-Consumer",
-    desc: "C implementation of producer-consumer pattern using POSIX pthreads and semaphores. Features circular bounded buffer, poison pill termination, priority queues, and latency/throughput metrics.",
-    href: "https://github.com/mabaan/Multithreaded-Producer-Consumer-Application",
-    img: "/placeholder.webp", // TODO: Add Producer-Consumer diagram
-    tech: ["C", "POSIX", "Pthreads", "Semaphores", "OS Concepts"],
+    title: "CloudDesk - Cloud-Native IT Ticketing",
+    desc: "CloudDesk is a serverless IT helpdesk built on AWS with role-based employee and agent workflows. It supports secure sign-in, fast ticket routing, and end-to-end lifecycle tracking with real-time status visibility.",
+    href: "https://github.com/mabaan/CloudDesk",
+    img: "/clouddesk.png",
+    tech: ["AWS Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "SAM"],
+    featured: false
+  },
+  {
+    title: "Social Engineering Attack Demo",
+    desc: "Educational demonstrations of social engineering attacks including GUI confusion phishing and privacy dark patterns. Features fullscreen fake login pages and predatory privacy settings UI studies.",
+    href: "https://github.com/mabaan/Social-Engineering-Attack",
+    img: "/soeng.jpg", 
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Security Research"],
     featured: false
   }
+];
+
+// Global priority order for `/projects` (importance + completion + real-world impact).
+const projectPriorityOrder = [
+  "ReversePrompt - AI Customer Support Agent",
+  "KHAYAL: EEG Imagined Speech Classification",
+  "Official Company Website for SME",
+  "FishNet - Phishing Detection Extension",
+  "Anime Recommendation Model",
+  "CloudDesk - Cloud-Native IT Ticketing",
+  "Social Engineering Attack Demo",
+  "Carway: Vehicle Auction Platform",
+  "SmartMealz - BMI Meal Planner",
+
+  // Then the rest
+  "Malware Classification using CNNs",
+  "PV Fault Detection System",
+  "Heart Disease Prediction",
 ];
 
 interface FeaturedProjectsProps {
@@ -104,7 +130,15 @@ interface FeaturedProjectsProps {
 }
 
 export default function FeaturedProjects({ showAll = false, showViewMoreButton = true }: FeaturedProjectsProps) {
-  const projects = showAll ? allProjects : allProjects.filter(p => p.featured);
+  const projects = [...allProjects]
+    .sort((a, b) => {
+      const aRank = projectPriorityOrder.indexOf(a.title);
+      const bRank = projectPriorityOrder.indexOf(b.title);
+      const safeARank = aRank === -1 ? Number.MAX_SAFE_INTEGER : aRank;
+      const safeBRank = bRank === -1 ? Number.MAX_SAFE_INTEGER : bRank;
+      return safeARank - safeBRank;
+    })
+    .filter((p) => (showAll ? true : p.featured));
   
   return (
     <section id="projects" className="mt-16 px-2 sm:px-6">
@@ -247,3 +281,5 @@ export default function FeaturedProjects({ showAll = false, showViewMoreButton =
     </section>
   );
 }
+
+

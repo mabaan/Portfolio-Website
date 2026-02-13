@@ -18,7 +18,7 @@ const socials = [
   },
 ];
 
-const email = "abaan7500@gmail.com";
+const email = "me@mabaan.com";
 const resumeHref = "/assets/Mohammed%20Abaan%20Resume.pdf";
 const YEAR = new Date().getFullYear();
 
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-sm text-text-secondary py-6">
-        © {YEAR} Mohammed Abaan — Built with Astro + Tailwind
+        © {YEAR} Mohammed Abaan
       </div>
     </footer>
   );

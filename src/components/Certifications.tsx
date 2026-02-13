@@ -27,13 +27,17 @@ export default function Certifications({
   items,
 }: CertificationsProps) {
   const displayItems = items && items.length > 0 ? items : defaultItems;
+  const gridClassName =
+    displayItems.length === 1
+      ? "grid grid-cols-1 gap-5 justify-items-center"
+      : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center";
 
   return (
     <div className="w-full flex flex-col gap-6">
       <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary mb-1 text-center tracking-tight">
         {heading}
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+      <div className={gridClassName}>
         {displayItems.map((cert) => {
           const width = cert.width ?? 220;
           const height = cert.height; // optional explicit height
