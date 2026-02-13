@@ -20,7 +20,7 @@ const allProjects = [
   },
   {
     title: "KHAYAL: EEG Imagined Speech Classification",
-    desc: "Brain-computer interface system for classifying imagined Arabic speech from EEG data. Two-stage pipeline using transformer neural networks for word classification and JAIS-13B LLM for sentence reconstruction.",
+    desc: "Brain-computer interface system for classifying imagined Arabic speech from EEG data. Two-stage pipeline using transformer neural networks for word classification and LLM for sentence reconstruction.",
     href: "https://github.com/mabaan/Imagined-Speech-EEG-Classification",
     img: "/khayal.jpg", // TODO: Add EEG project screenshot
     tech: ["Python", "PyTorch", "Transformers", "EEG", "LLM", "BCI"],

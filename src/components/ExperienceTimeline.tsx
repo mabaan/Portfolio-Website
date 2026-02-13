@@ -285,7 +285,7 @@ export default function ExperienceTimeline() {
                             className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl border-2 flex items-center justify-center overflow-hidden shadow-sm"
                             style={{
                               borderColor: config.color,
-                              backgroundColor: "var(--bg)"
+                              backgroundColor: exp.logo === "/etihad.png" ? "#1003a3" : "#ffffff"
                             }}
                           >
                             <img

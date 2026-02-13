@@ -35,10 +35,9 @@ export default function Hero() {
           <span className="text-accent">Mohammed<br />Abaan.</span>
         </h1>
         <p className="mt-2 text-lg text-text-secondary max-w-xl">
-          Final year Computer Science Student at the American University of Sharjah, passionate about Machine Learning, Software Engineering.<br />
+          Final-year Computer Science student at the American University of Sharjah, focused on building practical AI and machine learning products.<br />
           <br />
-          Focused on AI and building intelligent solutions with Python, TensorFlow, PyTorch, and modern web tools.<br />
-          I also build fast, accessible web apps and data platforms when needed.
+          I turn messy problems into clean, working solutions, from data and model development to polished, fast web experiences. I like projects that sit at the intersection of ML, software engineering, and real-world impact.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 w-full">
           <a href={resumeHref} className="btn px-6 py-3 rounded-lg font-bold text-base bg-accent text-white shadow hover:bg-accent-dark transition">

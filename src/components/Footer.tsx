@@ -25,7 +25,7 @@ const YEAR = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="bg-[color:var(--muted)] border-t border-muted text-text-secondary">
-      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center md:items-center justify-between gap-10 md:gap-4">
+      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center md:items-center justify-between gap-6 md:gap-4">
         {/* Left: Info block */}
         <div className="flex flex-col md:flex-row items-center md:items-center w-full md:w-auto gap-4 md:gap-6">
           {/* Replace MA with a simple coding icon, SVG, or initials if you want */}
@@ -48,8 +48,8 @@ export default function Footer() {
               <a href={`mailto:${email}`} className="hover:text-accent transition">{email}</a>
             </div>
             <div className="mt-2 text-sm max-w-xl text-text-secondary">
-              I build fast, accessible web experiences and data solutions.<br />
-              Based in UAE, open to opportunities and collaborations.
+              Building practical AI and modern web products.<br />
+              Based in the UAE, open to opportunities and collaborations.
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="text-center text-sm text-text-secondary py-6">
+      <div className="text-center text-sm text-text-secondary py-4">
         © {YEAR} Mohammed Abaan
       </div>
     </footer>
