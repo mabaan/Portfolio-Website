@@ -42,7 +42,7 @@ const allProjects = [
     href: "https://github.com/mabaan/Anime-Recommendation-Model",
     img: "/anime rec.png",
     tech: ["Python", "Flask", "scikit-learn", "React", "APIs"],
-    featured: true
+    featured: false
   },
   {
     title: "SmartMealz - BMI Meal Planner",
@@ -86,7 +86,7 @@ const allProjects = [
     href: "https://github.com/mabaan/RPM",
     img: "/rp.jpg", 
     tech: ["Python", "FastAPI", "RAG", "FAISS", "Qwen LLM", "Multi-Agent", "Docker"],
-    featured: false
+    featured: true
   },
   {
     title: "CloudDesk - Cloud-Native IT Ticketing",

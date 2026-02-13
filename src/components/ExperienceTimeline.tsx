@@ -215,7 +215,7 @@ const typeConfig = {
 };
 
 export default function ExperienceTimeline() {
-  const [expandedId, setExpandedId] = useState<string | null>(experiences[0]?.id || null);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const toggleExpanded = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
