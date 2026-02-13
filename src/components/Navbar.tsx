@@ -101,20 +101,25 @@ export default function Navbar(): React.ReactElement {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden flex items-center justify-center p-2 rounded text-[var(--text-primary)]"
-          aria-label="Open menu"
-          aria-controls="mobile-menu"
-          aria-expanded={mobileMenuOpen}
-          onClick={() => setMobileMenuOpen(true)}
-        >
-          <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <line x1="6" y1="7" x2="18" y2="7" />
-            <line x1="6" y1="12" x2="18" y2="12" />
-            <line x1="6" y1="17" x2="18" y2="17" />
-          </svg>
-        </button>
+        {/* Mobile: Theme Toggle + Hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <div className="scale-90">
+            <ThemeToggle />
+          </div>
+          <button
+            className="flex items-center justify-center p-2 rounded text-[var(--text-primary)]"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <line x1="6" y1="7" x2="18" y2="7" />
+              <line x1="6" y1="12" x2="18" y2="12" />
+              <line x1="6" y1="17" x2="18" y2="17" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* ---- Mobile Hamburger Menu ---- */}
