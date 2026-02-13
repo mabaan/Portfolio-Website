@@ -222,19 +222,19 @@ export default function ExperienceTimeline() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full px-4 sm:px-0">
       {/* Timeline Container */}
       <div className="relative">
         {/* Vertical Timeline Line */}
         <div
-          className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 transform md:-translate-x-1/2"
+          className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-0.5 transform md:-translate-x-1/2"
           style={{
             background: "linear-gradient(to bottom, var(--color-accent), var(--muted))"
           }}
         />
 
         {/* Experience Items */}
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {experiences.map((exp, index) => {
             const isExpanded = expandedId === exp.id;
             const config = typeConfig[exp.type];
@@ -249,18 +249,18 @@ export default function ExperienceTimeline() {
               >
                 {/* Timeline Dot */}
                 <div
-                  className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 rounded-full border-4 flex items-center justify-center z-10 shadow-lg"
+                  className="absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 flex items-center justify-center z-10 shadow-lg"
                   style={{
                     borderColor: config.color,
                     backgroundColor: "var(--surface)"
                   }}
                 >
-                  <span style={{ color: config.color }}>{config.icon}</span>
+                  <span style={{ color: config.color }} className="scale-75 sm:scale-100">{config.icon}</span>
                 </div>
 
                 {/* Content Card */}
                 <div
-                  className={`w-full md:w-[calc(50%-4rem)] ml-24 md:ml-0 ${
+                  className={`w-full md:w-[calc(50%-4rem)] ml-20 sm:ml-24 md:ml-0 pr-4 sm:pr-0 ${
                     isLeft ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
                   }`}
                 >
@@ -273,16 +273,16 @@ export default function ExperienceTimeline() {
                   >
                     {/* Header Section */}
                     <div
-                      className="p-6"
+                      className="p-4 sm:p-6"
                       style={{
                         backgroundColor: isExpanded ? config.bgColor : "transparent"
                       }}
                     >
-                      <div className={`flex items-start gap-4 ${isLeft ? "md:flex-row-reverse" : ""}`}>
+                      <div className={`flex items-start gap-3 sm:gap-4 ${isLeft ? "md:flex-row-reverse" : ""}`}>
                         {/* Company Logo */}
                         <div className="flex-shrink-0">
                           <div
-                            className="w-16 h-16 rounded-xl border-2 flex items-center justify-center overflow-hidden shadow-sm"
+                            className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl border-2 flex items-center justify-center overflow-hidden shadow-sm"
                             style={{
                               borderColor: config.color,
                               backgroundColor: "var(--bg)"
@@ -291,48 +291,48 @@ export default function ExperienceTimeline() {
                             <img
                               src={exp.logo}
                               alt={`${exp.company} logo`}
-                              className="w-full h-full object-contain p-2"
+                              className="w-full h-full object-contain p-1.5 sm:p-2"
                             />
                           </div>
                         </div>
 
                         {/* Title and Info */}
-                        <div className={`flex-1 ${isLeft ? "md:text-right" : ""}`}>
+                        <div className={`flex-1 min-w-0 ${isLeft ? "md:text-right" : ""}`}>
                           <div className="flex items-start justify-between gap-2 flex-wrap">
-                            <div className="flex-1">
-                              <h3 className="text-xl font-bold text-text-primary mb-1 group-hover:text-[color:var(--color-accent)] transition-colors">
+                            <div className="flex-1 min-w-0">
+                              <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-1 group-hover:text-[color:var(--color-accent)] transition-colors">
                                 {exp.position}
                               </h3>
-                              <p className="text-lg font-semibold mb-1" style={{ color: config.color }}>
+                              <p className="text-base sm:text-lg font-semibold mb-1" style={{ color: config.color }}>
                                 {exp.company}
                               </p>
                             </div>
                           </div>
 
-                          <div className="flex flex-wrap gap-3 mt-2 text-sm text-text-secondary">
+                          <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 text-xs sm:text-sm text-text-secondary">
                             <span className="flex items-center gap-1">
-                              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                               </svg>
                               {exp.location}
                             </span>
                             <span className="flex items-center gap-1">
-                              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                               </svg>
                               {exp.period}
                             </span>
                           </div>
 
-                          <p className="mt-3 text-text-secondary leading-relaxed">
+                          <p className="mt-3 text-text-secondary leading-relaxed text-sm sm:text-base">
                             {exp.description}
                           </p>
 
                           {/* Expand Indicator */}
-                          <div className={`mt-3 flex items-center gap-2 text-sm font-semibold ${isLeft ? "md:justify-end" : ""}`} style={{ color: config.color }}>
+                          <div className={`mt-3 flex items-center gap-2 text-xs sm:text-sm font-semibold ${isLeft ? "md:justify-end" : ""}`} style={{ color: config.color }}>
                             <span>{isExpanded ? "Show less" : "Show more"}</span>
                             <svg
-                              className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                              className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform ${isExpanded ? "rotate-180" : ""}`}
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -346,23 +346,23 @@ export default function ExperienceTimeline() {
                     {/* Expanded Details */}
                     {isExpanded && (
                       <div className="border-t-2" style={{ borderColor: config.color }}>
-                        <div className="p-6 space-y-4">
+                        <div className="p-4 sm:p-6 space-y-4">
                           {/* Key Responsibilities/Achievements */}
                           {exp.bullets && exp.bullets.length > 0 && (
                             <div>
-                              <h4 className="text-base font-bold text-text-primary mb-3 text-left">
+                              <h4 className="text-sm sm:text-base font-bold text-text-primary mb-3 text-left">
                                 Key Achievements & Responsibilities
                               </h4>
                               <ul className="space-y-3 text-left list-none pl-0">
                                 {exp.bullets.map((bullet, idx) => {
                                   if (typeof bullet === 'string') {
                                     return (
-                                      <li key={idx} className="flex items-start gap-3">
+                                      <li key={idx} className="flex items-start gap-2 sm:gap-3">
                                         <span
                                           className="mt-[0.35em] w-2 h-2 rounded-full flex-shrink-0"
                                           style={{ backgroundColor: config.color }}
                                         />
-                                        <span className="text-text-secondary leading-relaxed flex-1">
+                                        <span className="text-text-secondary leading-relaxed flex-1 text-sm sm:text-base">
                                           {bullet}
                                         </span>
                                       </li>
@@ -371,19 +371,19 @@ export default function ExperienceTimeline() {
                                   
                                   return (
                                     <li key={idx} className="flex flex-col gap-2">
-                                      <div className="flex items-start gap-3">
+                                      <div className="flex items-start gap-2 sm:gap-3">
                                         <span
                                           className="mt-[0.35em] w-2 h-2 rounded-full flex-shrink-0"
                                           style={{ backgroundColor: config.color }}
                                         />
-                                        <span className="text-text-secondary leading-relaxed flex-1 font-medium">
+                                        <span className="text-text-secondary leading-relaxed flex-1 font-medium text-sm sm:text-base">
                                           {bullet.main}
                                         </span>
                                       </div>
                                       {bullet.sub && bullet.sub.length > 0 && (
-                                        <ul className="ml-5 space-y-1.5 list-disc pl-4 marker:text-text-secondary">
+                                        <ul className="ml-4 sm:ml-5 space-y-1.5 list-disc pl-4 marker:text-text-secondary">
                                           {bullet.sub.map((subItem, subIdx) => (
-                                            <li key={subIdx} className="text-sm text-text-secondary leading-relaxed">
+                                            <li key={subIdx} className="text-xs sm:text-sm text-text-secondary leading-relaxed">
                                               {subItem}
                                             </li>
                                           ))}
@@ -399,14 +399,14 @@ export default function ExperienceTimeline() {
                           {/* Skills Used */}
                           {exp.skills && exp.skills.length > 0 && (
                             <div>
-                              <h4 className="text-base font-bold text-text-primary mb-3 text-left">
+                              <h4 className="text-sm sm:text-base font-bold text-text-primary mb-3 text-left">
                                 Skills & Technologies
                               </h4>
-                              <div className="flex flex-wrap gap-2 justify-start">
+                              <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-start">
                                 {exp.skills.map((skill, idx) => (
                                   <span
                                     key={idx}
-                                    className="px-3 py-1.5 rounded-lg text-sm font-medium border-2 transition-all hover:scale-105"
+                                    className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium border-2 transition-all hover:scale-105"
                                     style={{
                                       borderColor: config.color,
                                       color: config.color,
@@ -427,15 +427,15 @@ export default function ExperienceTimeline() {
                   {/* Type Badge */}
                   <div className={`mt-3 flex ${isLeft ? "md:justify-end" : ""}`}>
                     <span
-                      className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border-2"
+                      className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 sm:px-3 rounded-full text-xs font-semibold border-2"
                       style={{
                         borderColor: config.color,
                         color: config.color,
                         backgroundColor: config.bgColor
                       }}
                     >
-                      <span style={{ display: 'inline-flex', alignItems: 'center' }}>{config.icon}</span>
-                      {config.label}
+                      <span className="scale-75 sm:scale-100" style={{ display: 'inline-flex', alignItems: 'center' }}>{config.icon}</span>
+                      <span className="hidden xs:inline sm:inline">{config.label}</span>
                     </span>
                   </div>
                 </div>
