@@ -224,7 +224,7 @@ export default function ExperienceTimeline() {
   return (
     <div className="w-full px-4 sm:px-0">
       {/* Timeline Container */}
-      <div className="relative">
+      <div className="relative -translate-x-4 md:translate-x-0">
         {/* Vertical Timeline Line */}
         <div
           className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-0.5 transform md:-translate-x-1/2"
