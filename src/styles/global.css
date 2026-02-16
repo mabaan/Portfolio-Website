@@ -34,6 +34,15 @@
   --danger: #EF4444;
 }
 
+/* Improve navbar logo contrast on dark theme */
+.navbar-logo {
+  transition: filter 0.2s ease;
+}
+
+[data-theme="dark"] .navbar-logo {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(14%) saturate(360%) hue-rotate(97deg) brightness(100%) contrast(93%);
+}
+
 /* Base element styles */
 html, body {
   height: 100%;

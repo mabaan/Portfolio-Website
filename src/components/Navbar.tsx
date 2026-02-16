@@ -42,16 +42,15 @@ export default function Navbar(): React.ReactElement {
             <img
               src="/portfolio logo.png"
               alt="Logo"
-              className="h-10 w-10 object-contain"
+              className="navbar-logo h-10 w-10 object-contain"
               style={{ minWidth: 40 }}
             />
           </a>
           {/* Move brand text closer to center */}
           <span
-            className="font-extrabold text-xl tracking-wide"
+            className="font-extrabold text-xl tracking-wide ml-[3vw] md:ml-4 lg:ml-5"
             style={{
               color: 'var(--text-primary)',
-              marginLeft: '3vw',
               minWidth: 0,
               whiteSpace: 'nowrap',
             }}
@@ -149,7 +148,7 @@ export default function Navbar(): React.ReactElement {
               <img
                 src="/portfolio logo.png"
                 alt="Logo"
-                className="h-8 w-8 object-contain"
+                className="navbar-logo h-8 w-8 object-contain"
                 style={{ minWidth: 32 }}
               />
               {/* Move brand text more towards center on mobile */}
