@@ -29,6 +29,7 @@
   },
   "overrides": {
     "mdast-util-to-hast": "^13.2.1",
-    "path-to-regexp": "^6.3.0"
+    "path-to-regexp": "^6.3.0",
+    "tar": ">=7.5.8"
   }
 }
