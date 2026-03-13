@@ -3,15 +3,99 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import ThemeToggle from '../components/ThemeToggle';
 import Footer from '../components/Footer';
-const YEAR = new Date().getFullYear();
+import Analytics from '@vercel/analytics/astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const {
+  title = 'Mohammed Abaan | Portfolio',
+  description = 'Portfolio of Mohammed Abaan, Computer Science student and full-stack developer in Dubai. Projects, experience, resume, and contact.',
+  canonicalPath,
+  ogImage = '/GitHub Wallpaper.jpg',
+  noindex = false,
+  structuredData,
+} = Astro.props;
+
+const siteUrl = 'https://www.mabaan.com';
+const resolvedPath = canonicalPath ?? Astro.url.pathname;
+const canonicalUrl = new URL(resolvedPath, siteUrl).toString();
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).toString();
+
+const defaultStructuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: 'Mohammed Abaan Portfolio',
+      description,
+      inLanguage: 'en',
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: 'Mohammed Abaan',
+      url: `${siteUrl}/`,
+      email: 'mailto:me@mabaan.com',
+      jobTitle: 'Computer Science Student and Full-Stack Developer',
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'American University of Sharjah',
+      },
+      sameAs: [
+        'https://github.com/mabaan',
+        'https://www.linkedin.com/in/mohammed-abaan-0245ba289/',
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: title,
+      description,
+      isPartOf: {
+        '@id': `${siteUrl}/#website`,
+      },
+      about: {
+        '@id': `${siteUrl}/#person`,
+      },
+    },
+  ],
+};
+
+const jsonLd = structuredData ?? defaultStructuredData;
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Mohammed Abaan | Portfolio</title>
-    <meta name="description" content="Portfolio of Mohammed Abaan, Computer Science student and full-stack developer in Dubai. Projects, experience, resume, and contact." />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mohammed Abaan Portfolio" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -55,5 +139,6 @@ const YEAR = new Date().getFullYear();
       <slot />
     </main>
     <Footer client:load />
+    <Analytics />
   </body>
 </html>
